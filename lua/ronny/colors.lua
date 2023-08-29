@@ -627,18 +627,26 @@ M.diagnostic = {
 -- yamlKey
 -- yamlConstant
 
--- TODO: Gitgutter (unchecked)
--- GitGutterAdd
--- GitGutterChange
--- GitGutterDelete
+-- Gitgutter
+M.gitgutter = {}
+local gitgutter = M.gitgutter
+gitgutter.GitGutterAdd    = { fg=pal.bright_green, bg="#232526", bold=true}
+gitgutter.GitGutterChange = { fg=pal.bright_black, bg="#232526", bold=true}
+gitgutter.GitGutterDelete = { fg=pal.bright_red, bg="#232526", bold=true}
+gitgutter.GitGutterAddLine    = { fg=pal.black, bg=pal.bright_green }
+gitgutter.GitGutterChangeLine = { fg=pal.black, bg=pal.bright_black }
+gitgutter.GitGutterDeleteLine = { fg=pal.black, bg=pal.bright_red }
 
--- TODO: Git Signs (unchecked)
--- GitSignsAdd
--- GitSignsChange
--- GitSignsDelete
--- GitSignsAddLn
--- GitSignsChangeLn
--- GitSignsDeleteLn
+-- Git Signs
+M.gitsigns = {}
+local gitsigns = M.gitsigns
+
+gitsigns.GitSignsAdd    = { fg=pal.bright_green, bg="#232526", bold=true}
+gitsigns.GitSignsChange = { fg=pal.bright_black, bg="#232526", bold=true}
+gitsigns.GitSignsDelete = { fg=pal.bright_red, bg="#232526", bold=true}
+gitsigns.GitSignsAddLn    = { fg=pal.black, bg=pal.bright_green }
+gitsigns.GitSignsChangeLn = { fg=pal.black, bg=pal.bright_black }
+gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 
 -- TODO: NvimTree (unchecked)
 -- NvimTreeRootFolder
