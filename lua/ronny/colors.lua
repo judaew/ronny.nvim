@@ -76,58 +76,60 @@ syntax.Error =        { fg="NONE", bg="NONE", sp=pal.red, underline=true }
 syntax.Todo =         { fg=pal.black, bg=pal.bright_cyan, bold=true }
 
 -- See :help highlight-default
+-- TEST: float window
+-- :lua vim.api.nvim_open_win(0, true, { relative='win', width=120, height=15, border="single", win = 1001, row = 20, col = 20, zindex=zindex })
 M.builtin = {}
 local builtin = M.builtin
 
-builtin.ColorColumn =  { bg="#232526" }
--- builtin.Conceal
--- builtin.CurSearch
--- builtin.Cursor
--- builtin.lCursor
--- builtin.CursorIM
-builtin.CursorColumn = { bg="#293739" }
-builtin.CursorLine =   { bg="#293739" }
-builtin.Directory =    { fg=pal.bright_green, bold=true }
-builtin.DiffAdd =      { bg="#13354A" }
-builtin.DiffChange =   { fg="#89807D", bg="#4C4745" }
-builtin.DiffDelete =   { fg="#960050", bg="#1E0010" }
-builtin.DiffText =     { bg="#4C4745", bold=true, italic=true }
--- builtin.EndOfBuffer
--- builtin.TermCursor
--- builtin.TermCursorNC
-builtin.ErrorMsg =     { fg=pal.bright_red, bg="#232526", bold=true }
--- builtin.WinSeparator
-builtin.Folded =       { fg="#465457", bg="#000000" }
-builtin.FoldColumn =   { fg="#465457", bg="#000000" }
+builtin.ColorColumn =  { fg="NONE", bg="#232526" }
+builtin.Conceal =      { fg=syntax.Comment.fg, bg="NONE" }
+builtin.CurSearch =    { fg=pal.black, bg=pal.yellow }
+builtin.Cursor =       { fg=pal.black, bg=pal.white }
+-- builtin.lCursor =      {}
+-- builtin.CursorIM =     {}
+builtin.CursorColumn = { fg="NONE", bg="#232526" }
+builtin.CursorLine =   { fg="NONE", bg="#3F3D3D" }
+builtin.Directory =    { fg=pal.bright_green, bg="NONE" }
+builtin.DiffAdd =      { fg=pal.green, bg="NONE", bold=true }
+builtin.DiffChange =   { fg=pal.bright_black, bg="NONE", bold=true }
+builtin.DiffDelete =   { fg=pal.bright_red, bg="NONE", bold=true }
+builtin.DiffText =     { fg=pal.black, bg=pal.bright_yellow, bold=true }
+builtin.EndOfBuffer =  { fg="#465457", bg="NONE" }
+-- builtin.TermCursor =   {}
+-- builtin.TermCursorNC = {}
+builtin.ErrorMsg =     { fg=pal.bright_red, bg="#232526" }
+builtin.WinSeparator = { fg="#465457", bg="NONE" }
+builtin.Folded =       { fg=pal.white, bg="#49483E" }
+builtin.FoldColumn =   { fg="#465457", bg="#232526" }
 builtin.SignColumn =   { fg=pal.bright_green, bg="#232526" }
-builtin.IncSearch =    { fg=pal.yuma, bg="#000000" }
--- builtin.Substitute
-builtin.LineNr =       { fg="#465457", bg=pal.black }
--- builtin.LineNrAbove
--- builtin.LineNrBelow
-builtin.CursorLineNr = { fg=pal.yellow }
--- builtin.CursorLineFold
--- builtin.CursorLineSign
-builtin.MatchParen =   { fg="#000000", bg=pal.yellow, bold=true }
+builtin.IncSearch =    { link="CurSearch" }
+builtin.Substitute =   { link="Search" }
+builtin.LineNr =       { fg="#465457", bg="#232526" }
+builtin.LineNrAbove =  { link="LineNr" }
+builtin.LineNrBelow =  { link="LineNr" }
+builtin.CursorLineNr = { fg=pal.white, bg="#232526" }
+builtin.CursorLineFold = { link="FoldColumn" }
+builtin.CursorLineSign = { link="SignColumn" }
+builtin.MatchParen =   { fg=pal.black, bg=pal.yellow, bold=true }
 builtin.ModeMsg =      { fg=pal.bright_yellow }
--- builtin.MsgArea
-builtin.NonText =      { fg="#465457" }
+builtin.MsgArea =      { fg=pal.bright_white, bg=pal.black }
+builtin.NonText =      { fg="#465457", bg="NONE" }
 builtin.Normal =       { fg=pal.bright_white, bg=pal.black }
--- builtin.NormalFloat
--- builtin.FloatBorder
--- builtin.FloatTitle
+builtin.NormalFloat =  { fg="NONE", bg="#343434" }
+builtin.FloatBorder =  { fg=pal.gray, bg="#343434" }
+builtin.FloatTitle =   { fg=pal.yellow, bg="#343434" }
 -- builtin.NormalNC
-builtin.Pmenu =        { fg=pal.bright_cyan, bg="#000000" }
-builtin.PmenuSel =     { bg=pal.bright_black }
--- builtin.PmenuKind
--- builtin.PmenuKindSel
--- builtin.PmenuExtra
--- builtin.PmenuExtraSel
-builtin.PmenuSbar =    { bg="#080808" }
-builtin.PmenuThumb =   { fg=pal.bright_cyan }
-builtin.Question =     { fg=pal.bright_cyan }
--- builtin.QuickFixLine
-builtin.Search =       { fg="#000000", bg="#FFE792" }
+builtin.Pmenu =        { fg=pal.bright_cyan, bg="#343434" } -- or #36454F
+builtin.PmenuSel =     { fg=pal.black, bg=pal.bright_black, bold=true }
+builtin.PmenuKind =    { link="Pmenu" }
+builtin.PmenuKindSel = { link="PmenuSel" }
+builtin.PmenuExtra =   { link="Pmenu" }
+builtin.PmenuExtraSel = { link="PmenuSel" }
+builtin.PmenuSbar =    { fg="NONE", bg=pal.bright_black }
+builtin.PmenuThumb =   { fg="NONE", bg=pal.white }
+builtin.Question =     { fg=pal.bright_cyan, bg="NONE" }
+builtin.QuickFixLine = { link="Search" }
+builtin.Search =       { fg=pal.black, bg=pal.bright_yellow }
 builtin.SpecialKey =   { fg="#465457" }
 builtin.SpellBad =     { sp = "#FF0000", undercurl=true }
 builtin.SpellCap =     { sp = "#7070F0", font="undercurl" }
@@ -138,7 +140,7 @@ builtin.StatusLineNC = { fg= "#808080", bg="#080808" }
 builtin.TabLine =      { fg=pal.black, bg="#808080" }
 builtin.TabLineFill =  { fg=pal.black, bg=pal.black }
 -- builtin.TabLineSel
-builtin.Title =        { fg="#EF5939" }
+builtin.Title =        { fg=pal.yellow }
 builtin.Visual =       { bg="#403D3D" }
 builtin.VisualNOS =    { bg="#403D3D" }
 builtin.WarningMsg =   { fg="#FFFFFF", bg="#333333" }
