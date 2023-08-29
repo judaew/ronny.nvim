@@ -21,6 +21,10 @@ function M.load(style)
 
     utils.apply_syntax(colors.syntax)
     utils.apply_syntax(colors.builtin)
+    utils.apply_syntax(colors.whichkey)
+    utils.apply_syntax(colors.gitgutter)
+    utils.apply_syntax(colors.gitsigns)
+    utils.apply_syntax(colors.nvim_cmp)
 end
 
 return M
