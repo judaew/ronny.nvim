@@ -727,14 +727,13 @@ nvim_cmp.CmpItemMenu = { fg=pal.gray, bg="NONE" }
 
 -- TODO: DapUI (?)
 -- TODO: DevIcon (?)
--- TODO: WhickKey (?)
--- WhichKey links to Function
--- WhichKeyBorder links to FloatBorder
--- WhichKeySeparator links to Comment
--- WhichKeyDesc links to Identifier
--- WhichKeyValue links to Comment
--- WhichKeyFloat links to NormalFloat
--- WhichKeyGroup links to Keyword
+
+-- WhickKey
+M.whichkey = {}
+local whichkey = M.whichkey
+
+whichkey.WhichKeyFloat = { fg="NONE", bg="#171717" }
+
 -- TODO: Dashboard (?)
 -- TODO: hlargs.nvim (?)
 
