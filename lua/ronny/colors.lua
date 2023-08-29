@@ -704,37 +704,16 @@ gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 -- CocHighlightRead
 -- CocHighlightWrite
 
--- TODO: nvim-cmp
--- CmpItemAbbr guifg=#66d9ef
--- CmpItemAbbrDeprecated guifg=#7e8e91
--- CmpItemAbbrMatch guifg=#66d9ef
--- CmpItemAbbrMatchFuzzy guifg=#66d9ef
--- CmpItemKind guifg=#66d9ef
--- CmpItemMenu guifg=#66d9ef
--- CmpItemKindClass links to CmpItemKind
--- CmpItemKindMethod links to CmpItemKind
--- CmpItemKindSnippet links to CmpItemKind
--- CmpItemKindColor links to CmpItemKind
--- CmpItemKindKeyword links to CmpItemKind
--- CmpItemKindProperty links to CmpItemKind
--- CmpItemKindEnumMember links to CmpItemKind
--- CmpItemKindConstant links to CmpItemKind
--- CmpItemKindModule links to CmpItemKind
--- CmpItemKindFile links to CmpItemKind
--- CmpItemKindFunction links to CmpItemKind
--- CmpItemKindVariable links to CmpItemKind
--- CmpItemKindInterface links to CmpItemKind
--- CmpItemKindConstructor links to CmpItemKind
--- CmpItemKindEnum links to CmpItemKind
--- CmpItemKindText links to CmpItemKind
--- CmpItemKindOperator links to CmpItemKind
--- CmpItemKindStruct links to CmpItemKind
--- CmpItemKindField links to CmpItemKind
--- CmpItemKindReference links to CmpItemKind
--- CmpItemKindEvent links to CmpItemKind
--- CmpItemKindValue links to CmpItemKind
--- CmpItemKindUnit links to CmpItemKind
--- CmpItemKindFolder links to CmpItemKind
+-- nvim-cmp
+M.nvim_cmp = {}
+local nvim_cmp = M.nvim_cmp
+
+nvim_cmp.CmpItemAbbr = { fg="#66d9ef", bg="NONE" }
+nvim_cmp.CmpItemAbbrDeprecated = { fg="#7e8e91", bg="NONE" }
+nvim_cmp.CmpItemAbbrMatch = { fg=pal.yellow, bg="NONE", bold=true }
+nvim_cmp.CmpItemAbbrMatchFuzzy = { fg=pal.yellow, bg="NONE", bold=true }
+nvim_cmp.CmpItemKind = { fg=pal.white, bg="NONE" }
+nvim_cmp.CmpItemMenu = { fg=pal.gray, bg="NONE" }
 
 -- TODO: Telescope (unchecked)
 -- TelescopePromptBorder
