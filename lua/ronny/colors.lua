@@ -39,41 +39,41 @@ local pal = M.palette
 M.syntax = {}
 local syntax = M.syntax
 
-syntax.Comment =      { fg="#7E8E91" }
-syntax.Constant =     { fg=pal.violet, bold=true } -- bold font?
-syntax.String =       { fg=pal.bright_yellow }
-syntax.Character =    { fg=pal.bright_yellow }
-syntax.Number =       { fg=pal.violet }
-syntax.Boolean =      { fg=pal.violet }
-syntax.Float =        { fg=pal.violet }
-syntax.Identifier =   { fg=pal.yellow }
-syntax.Function =     { fg=pal.bright_green }
-syntax.Statement =    { fg=pal.bright_red, bold=true }
-syntax.Conditional =  { fg=pal.bright_red, bold=true }
-syntax.Repeat =       { fg=pal.bright_red }
-syntax.Label =        { fg=pal.yellow }
-syntax.Operator =     { fg=pal.bright_red }
-syntax.Keyword  =     { fg=pal.bright_red, bold=true }
-syntax.Exception =    { fg=pal.bright_green, bold=true }
-syntax.PreProc =      { fg=pal.bright_green }
--- syntax.Include
-syntax.Define =       { fg=pal.bright_cyan }
-syntax.Macro =        { fg=pal.yuma, italic=true }
-syntax.PreCondit =    { fg=pal.bright_green, bold=true }
-syntax.Type =         { fg=pal.bright_cyan }
-syntax.StorageClass = { fg=pal.yellow, italic=true }
-syntax.Structure =    { fg=pal.bright_cyan }
-syntax.Typedef =      { fg=pal.bright_cyan }
-syntax.Special =      { fg=pal.bright_cyan, italic=true }
-syntax.SpecialChar =  { fg=pal.bright_red, italic=true }
-syntax.Tag =          { fg=pal.bright_red, italic=true }
-syntax.Delimiter =    { fg="#8F8F8F" }
-syntax.SpecialComment = { fg="#7E8E91", bold=true }
-syntax.Debug =        { fg="#BCA3A3", bold=true }
-syntax.Underlined =   { fg="#808080", underline=true }
-syntax.Ignore =       { fg="#808080" }
-syntax.Error =        { fg=pal.bright_yellow, bg="#1E0010" }
-syntax.Todo =         { fg=pal.bright_white, bold=true }
+syntax.Comment =      { fg=pal.gray, bg="NONE" } -- italic?
+syntax.Constant =     { fg=pal.violet, bg="NONE" }
+syntax.String =       { fg=pal.bright_yellow, bg="NONE" }
+syntax.Character =    { fg=pal.bright_yellow, bg="NONE"  }
+syntax.Number =       { fg=pal.violet, bg="NONE" }
+syntax.Boolean =      { fg=pal.violet, bg="NONE" }
+syntax.Float =        { fg=pal.violet, bg="NONE" }
+syntax.Identifier =   { fg=pal.yellow, bg="NONE" }
+syntax.Function =     { fg=pal.bright_green, bg="NONE" }
+syntax.Statement =    { fg=pal.bright_red, bg="NONE" }
+syntax.Conditional =  { fg=pal.bright_red, bg="NONE" }
+syntax.Repeat =       { fg=pal.bright_red, bg="NONE" }
+syntax.Label =        { fg=pal.yellow, bg="NONE" }
+syntax.Operator =     { fg=pal.bright_red, bg="NONE" }
+syntax.Keyword  =     { fg=pal.bright_red, bg="NONE" }
+syntax.Exception =    { fg=pal.bright_green, bg="NONE" }
+syntax.PreProc =      { fg=pal.bright_red, bg="NONE" }
+syntax.Include =      { fg=pal.bright_red, bg="NONE" }
+syntax.Define =       { fg=pal.bright_red, bg="NONE" }
+syntax.Macro =        { fg=pal.bright_green, bg="NONE" }
+syntax.PreCondit =    { fg=pal.bright_green, bg="NONE" }
+syntax.Type =         { fg=pal.bright_cyan, bg="NONE" }
+syntax.StorageClass = { fg=pal.yellow, bg ="NONE", italic=true }
+syntax.Structure =    { fg=pal.bright_cyan, bg="NONE", italic=true }
+syntax.Typedef =      { fg=pal.bright_cyan, bg="NONE" }
+syntax.Special =      { fg=pal.bright_cyan, bg="NONE", italic=true }
+syntax.SpecialChar =  { fg=pal.bright_red, bg="NONE", italic=true } -- TODO: violet?
+syntax.Tag =          { fg=pal.bright_red, bg="NONE", italic=true }
+syntax.Delimiter =    { fg=syntax.Comment.fg, bg="NONE" }
+syntax.SpecialComment = { fg=syntax.Comment.fg, bg="NONE", italic=true }
+syntax.Debug =        { fg="#BCA3A3", bg="NONE" }
+syntax.Underlined =   { fg="#808080", bg="NONE", underline=true }
+syntax.Ignore =       { fg="#808080", bg="NONE" }
+syntax.Error =        { fg="NONE", bg="NONE", sp=pal.red, underline=true }
+syntax.Todo =         { fg=pal.black, bg=pal.bright_cyan, bold=true }
 
 -- See :help highlight-default
 M.builtin = {}
