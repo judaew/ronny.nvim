@@ -24,7 +24,13 @@ M.palette = {
     -- Other colors
     violet =        "#AE81FF",
     bright_violet = "#CEB3FF",
-    yuma =          "#C4BE89"
+    yuma =          "#C4BE89",
+    -- gray =          "#75715E",
+    -- gray2 =         "#49483E",
+    gray =          "#7E8E91",
+    bright_white2 = "#F8F8F0"
+
+    -- #8F8F8F
 }
 
 local pal = M.palette
