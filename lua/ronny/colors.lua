@@ -215,6 +215,8 @@ local ts = M.treesitter
 ts["@text.emphasis.html"] = { italic=true }
 ts["@text.strong.html"] = { bold=true }
 
+ts["@symbol"] = { link="Constant" } -- TODO: WIP
+
 -- @comment
 -- @punctuation
 -- @constant
