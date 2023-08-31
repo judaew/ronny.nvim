@@ -300,101 +300,6 @@ M.diagnostic = {
 -- asciidocQuotedUnconstrainedEmphasized
 -- asciidocURL
 
--- TODO: C
--- cStatement     links to Statement
--- cLabel         links to Label
--- cConditional   links to Conditional
--- cRepeat        links to Repeat
--- cTodo          links to Todo
--- cBadContinuation links to Error
--- cSpecial       links to SpecialChar
--- cFormat        links to cSpecial
--- cString        links to String
--- cCppString     links to cString
--- cSpaceError    links to cError
--- cCppSkip       cleared
--- cCharacter     links to Character
--- cSpecialError  links to cError
--- cSpecialCharacter links to cSpecial
--- cBadBlock      cleared
--- cCurlyError    links to cError
--- cErrInParen    links to cError
--- cCppParen      cleared
--- cErrInBracket  links to cError
--- cCppBracket    cleared
--- cBlock         cleared
--- cParenError    links to cError
--- cIncluded      links to cString
--- cCommentSkip   links to cComment
--- cCommentString links to cString
--- cComment2String links to cString
--- cCommentStartError links to cError
--- cUserLabel     links to Label
--- cBitField      cleared
--- cOctalZero     links to PreProc
--- cNumber        links to Number
--- cFloat         links to Float
--- cOctal         links to Number
--- cOctalError    links to cError
--- cNumbersCom    cleared
--- cParen         cleared
--- cBracket       cleared
--- cNumbers       cleared
--- cWrongComTail  links to cError
--- cCommentL      links to cComment
--- cCommentStart  links to cComment
--- cComment       links to Comment
--- cCommentError  links to cError
--- cOperator      links to Operator
--- cType          links to Type
--- cTypedef       links to Structure
--- cStructure     links to Structure
--- cStorageClass  links to StorageClass
--- cConstant      links to Constant
--- cPreCondit     links to PreCondit
--- cPreConditMatch links to cPreCondit
--- cCppInIf       cleared
--- cCppInElse     cleared
--- cCppInElse2    links to cCppOutIf2
--- cCppOutIf      cleared
--- cCppOutIf2     links to cCppOut
--- cCppOutElse    cleared
--- cCppInSkip     cleared
--- cCppOutSkip    links to cCppOutIf2
--- cCppOutWrapper links to cPreCondit
--- cCppInWrapper  links to cCppOutWrapper
--- cPreProc       links to PreProc
--- cInclude       links to Include
--- cDefine        links to Macro
--- cMulti         cleared
--- cPragma        cleared
--- cUserCont      cleared
--- cError         links to Error
--- cCppOut        links to Comment
-
--- TODO: C++
--- cppStatement   links to Statement
--- cppAccess      links to cppStatement
--- cppModifier    links to Type
--- cppType        links to Type
--- cppExceptions  links to Exception
--- cppOperator    links to Operator
--- cppCast        links to cppStatement
--- cppStorageClass links to StorageClass
--- cppStructure   links to Structure
--- cppBoolean     links to Boolean
--- cppConstant    links to Constant
--- cppRawStringDelimiter links to Delimiter
--- cppRawString   links to String
--- cppNumber      links to Number
--- cppFloat       links to Number
--- cppNumbers     cleared
--- cppString      links to String
--- cppCharacter   links to cCharacter
--- cppSpecialError links to cSpecialError
--- cppSpecialCharacter links to cSpecialCharacter
--- cppModule      links to Include
--- cppMinMax      cleared
 
 -- TODO: JSON (unchecked)
 -- jsonKeyword
@@ -441,6 +346,21 @@ M.diagnostic = {
 -- cssUnitDecorators
 -- cssStyle
 -- cssImportant
+-- C
+M.c = {}
+local c = M.c
+
+c.cTypedef = { link="Keyword" }
+c.cStructure = { link="Keyword" }
+c.cPreCondit = { link="PreProc" }
+c.cPreConditMatch = { link="PreProc" }
+c.cDefine = { link="Define" }
+
+-- CPP
+M.cpp = {}
+local cpp = M.cpp
+cpp.cppAccess = { link="Type" }
+cpp.cppStructure = { link="Keyword" }
 
 -- TODO: JavaScript (unchecked)
 -- jsVariableDef
