@@ -24,7 +24,6 @@ M.palette = {
     -- Other colors
     violet =        "#AE81FF",
     bright_violet = "#CEB3FF",
-    yuma =          "#C4BE89",
     gray =          "#7E8E91",
     gray2 =         "#465457",
     black2 =        "#232526",
