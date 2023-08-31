@@ -202,6 +202,8 @@ M.diagnostic = {
 -- LspInfoList
 
 -- TODO: treesitter
+M.treesitter = {}
+local ts = M.treesitter
 -- @text
 -- @text.literal
 -- @text.reference
@@ -209,6 +211,10 @@ M.diagnostic = {
 -- @text.uri
 -- @text.underline
 -- @text.todo
+
+ts["@text.emphasis.html"] = { italic=true }
+ts["@text.strong.html"] = { bold=true }
+
 -- @comment
 -- @punctuation
 -- @constant
@@ -300,46 +306,6 @@ M.diagnostic = {
 -- asciidocQuotedUnconstrainedEmphasized
 -- asciidocURL
 
-
--- TODO: HTML (unchecked)
--- htmlTag
--- htmlEndTag
--- htmlTagName
--- htmlSpecialTagName
--- htmlArg
-
--- TODO: PHP (unchecked)
--- phpStaticClasses
--- phpMethod
--- phpClass
--- phpFunction
--- phpInclude
--- phpUseClass
--- phpRegion
--- phpMethodsVar
-
--- TODO: CSS (unchecked)
--- cssBraces
--- cssInclude
--- cssTagName
--- cssClassName
--- cssPseudoClass
--- cssPseudoClassId
--- cssPseudoClassLang
--- cssIdentifier
--- cssProp
--- cssDefinition
--- cssAttr
--- cssAttrRegion
--- cssColor
--- cssFunction
--- cssFunctionName
--- cssVendor
--- cssValueNumber
--- cssValueLength
--- cssUnitDecorators
--- cssStyle
--- cssImportant
 -- C
 M.c = {}
 local c = M.c
@@ -362,6 +328,32 @@ local json = M.json
 
 json.jsonNull = { link="Special" }
 json.jsonQuote = { link="Delimiter" }
+
+-- HTML
+M.html = {}
+local html = M.html
+html.htmlTag = { link="Tag" }
+html.htmlEndTag = { link="Tag" }
+
+-- PHP
+M.php = {}
+local php = M.php
+php.phpVarSelector = { link="Identifier" }
+php.phpStructure = { link="Keyword" }
+php.phpStorageClass = { link="Type" }
+php.phpMemberSelector = { link="Operator" }
+php.phpClasses = { link="Type" }
+
+-- CSS
+M.css = {}
+local css = M.css
+css.cssTagName = { link="Type" }
+css.cssBraces = { link="Delimiter" }
+css.cssClassName = { link="Identifier" }
+css.cssClassNameDot = { link="Delimiter" }
+css.cssIdentifier = { link="Identifier" }
+css.cssPseudoClassId = { link="Identifier" }
+
 -- TODO: JavaScript (unchecked)
 -- jsVariableDef
 -- jsFuncArgs
