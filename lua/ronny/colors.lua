@@ -301,12 +301,6 @@ M.diagnostic = {
 -- asciidocURL
 
 
--- TODO: JSON (unchecked)
--- jsonKeyword
--- jsonEscape
--- jsonNull
--- jsonBoolean
-
 -- TODO: HTML (unchecked)
 -- htmlTag
 -- htmlEndTag
@@ -362,6 +356,12 @@ local cpp = M.cpp
 cpp.cppAccess = { link="Type" }
 cpp.cppStructure = { link="Keyword" }
 
+-- JSON
+M.json = {}
+local json = M.json
+
+json.jsonNull = { link="Special" }
+json.jsonQuote = { link="Delimiter" }
 -- TODO: JavaScript (unchecked)
 -- jsVariableDef
 -- jsFuncArgs
