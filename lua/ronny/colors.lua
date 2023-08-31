@@ -68,7 +68,7 @@ syntax.Tag =          { fg=pal.bright_red, bg="NONE", italic=true }
 syntax.Delimiter =    { fg=syntax.Comment.fg, bg="NONE" }
 syntax.SpecialComment = { fg=syntax.Comment.fg, bg="NONE", italic=true }
 syntax.Debug =        { fg="#BCA3A3", bg="NONE" }
-syntax.Underlined =   { fg=pal.bright_white, bg="NONE", underline=true }
+syntax.Underlined =   { fg="#0A95FF", bg="NONE", sp=pal.blue, undercurl=true }
 syntax.Ignore =       { fg=pal.bright_black, bg="NONE" }
 syntax.Error =        { fg="NONE", bg="NONE", sp=pal.red, underline=true }
 syntax.Todo =         { fg=pal.black, bg=pal.bright_cyan, bold=true }
