@@ -7,7 +7,6 @@ local M = {}
 -- end
 
 function M.load(style)
-    vim.cmd("hi clear")
     if vim.fn.exists("syntax_on") then
         vim.cmd("syntax reset")
     end
