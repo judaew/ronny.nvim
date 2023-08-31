@@ -356,154 +356,74 @@ css.cssClassNameDot = { link="Delimiter" }
 css.cssIdentifier = { link="Identifier" }
 css.cssPseudoClassId = { link="Identifier" }
 
--- TODO: JavaScript (unchecked)
--- jsVariableDef
--- jsFuncArgs
--- jsFuncBlock
--- jsRegexpString
--- jsThis
--- jsOperatorKeyword
--- jsDestructuringBlock
--- jsObjectKey
--- jsGlobalObjects
--- jsModuleKeyword
--- jsClassDefinition
--- jsClassKeyword
--- jsExtendsKeyword
--- jsExportDefault
--- jsFuncCall
--- jsObjectValue
--- jsParen
--- jsObjectProp
--- jsIfElseBlock
--- jsParenIfElse
--- jsSpreadOperator
--- jsSpreadExpression
+-- JavaScript
+M.javascript = {}
+local javascript = M.javascript
+javascript.javaScriptParens = { link="Delimiter" }
+javascript.javaScriptBraces = { link="Delimiter" }
+javascript.javaScriptIdentifier = { link="Keyword" }
+javascript.javaScriptFunction = { link="Keyword" }
 
--- TODO: Typescript (unchecked)
--- typescriptLabel
--- typescriptExceptions
--- typescriptBraces
--- typescriptEndColons
--- typescriptParens
--- typescriptDocTags
--- typescriptDocComment
--- typescriptLogicSymbols
--- typescriptImport
--- typescriptBOM
--- typescriptVariableDeclaration
--- typescriptVariable
--- typescriptExport
--- typescriptAliasDeclaration
--- typescriptAliasKeyword
--- typescriptClassName
--- typescriptAccessibilityModifier
--- typescriptOperator
--- typescriptArrowFunc
--- typescriptMethodAccessor
--- typescriptMember
--- typescriptTypeReference
--- typescriptTemplateSB
--- typescriptArrowFuncArg
--- typescriptParamImpl
--- typescriptFuncComma
--- typescriptCastKeyword
--- typescriptCall
--- typescriptCase
--- typescriptReserved
--- typescriptDefault
--- typescriptDecorator
--- typescriptPredefinedType
--- typescriptClassHeritage
--- typescriptClassExtends
--- typescriptClassKeyword
--- typescriptBlock
--- typescriptDOMDocProp
--- typescriptTemplateSubstitution
--- typescriptClassBlock
--- typescriptFuncCallArg
--- typescriptIndexExpr
--- typescriptConditionalParen
--- typescriptArray
--- typescriptES6SetProp
--- typescriptObjectLiteral
--- typescriptTypeParameter
--- typescriptEnumKeyword
--- typescriptEnum
--- typescriptLoopParen
--- typescriptParenExp
--- typescriptModule
--- typescriptAmbientDeclaration
--- typescriptFuncTypeArrow
--- typescriptInterfaceHeritage
--- typescriptInterfaceName
--- typescriptInterfaceKeyword
--- typescriptInterfaceExtends
--- typescriptGlobal
--- typescriptAsyncFuncKeyword
--- typescriptFuncKeyword
--- typescriptGlobalMethod
--- typescriptPromiseMethod
+-- Typescript
+M.typescript = {}
+local typescript = M.typescript
+typescript.typescriptVariable = { link="Keyword" }
+typescript.typescriptVariableDeclaration = { link="Identifier" }
+typescript.typescriptTypeAnnotation = { link="Delimiter" }
+typescript.typescriptAssign = { link="Operator" }
+typescript.typescriptparens = { link="Delimiter" }
+typescript.typescriptBraces = { link="Delimiter" }
+typescript.typescriptGlobal = { link="Identifier" }
+typescript.typescriptBinaryOp = { link="Operator" }
+typescript.typescriptLoopParen = { link="Operator" }
+typescript.typescriptConsoleMethod = { link="Function" }
+typescript.typescriptDotNotation = { link="Delimiter" }
+typescript.typescriptTypeBracket = { link="Delimiter" }
+typescript.typescriptMember = { link="Identifier" }
+typescript.typescriptDOMFormProp = { link="Identifier" }
+typescript.typescriptClassName = { link="Type" }
+typescript.typescriptBOMWindowMethod = { link="Function" }
+typescript.typescriptTypeReference = { link="Type" }
+typescript.typescriptTypeBrackets = { link="Delimiter" }
+typescript.typescriptArrowFunc = { link="Operator" }
+typescript.typescriptPromiseMethod = { link="Function" }
+typescript.typescriptCall = { link="Identifier" }
+typescript.typescriptFuncComma = { link="Delimiter" }
+typescript.typescriptTypeParameter = { link="Type" }
 
--- TODO: XML (unchecked)
--- xmlTag
--- xmlTagName
--- xmlEndTag
+-- XML
+M.xml = {}
+local xml = M.xml
+xml.xmlTag = { link="Tag" }
+xml.xmlTagName = { link="Tag" }
+xml.xmlAttrib = { link="Tag" }
+xml.xmlProcessing = { link="Tag" }
+xml.xmlEqual = { link="Delimiter" }
 
--- TODO: Ruby (unchecked)
--- rubyClassNameTag
--- rubyClassName
--- rubyModuleName
--- rubyConstant
+-- Ruby
+M.ruby = {}
+local ruby = M.ruby
+ruby.rubyCurlyBlockDelimiter = { link="Delimiter" }
 
--- TODO: Golang (unchecked)
--- goPackage
--- goImport
--- goVar
--- goConst
--- goStatement
--- goType
--- goSignedInts
--- goUnsignedInts
--- goFloats
--- goComplexes
--- goBuiltins
--- goBoolean
--- goPredefinedIdentifiers
--- goTodo
--- goDeclaration
--- goDeclType
--- goTypeDecl
--- goTypeName
--- goVarAssign
--- goVarDefs
--- goReceiver
--- goReceiverType
--- goFunctionCall
--- goMethodCall
--- goSingleDecl
+-- Golang
+M.go = {}
+local go = M.go
+go.goFormatSpecifier = { link="SpecialChar" }
+go.goEscapeC = { link="SpecialChar" }
+go.goBuiltins = { link="Special" }
+go.goPredefinedIdentifiers = { link="Special" }
 
--- TODO: Python (unchecked)
--- pythonStatement
--- pythonOperator
--- pythonException
--- pythonExClass
--- pythonBuiltinObj
--- pythonBuiltinType
--- pythonBoolean
--- pythonNone
--- pythonTodo
--- pythonClassVar
--- pythonClassDef
+-- Python
+M.python = {}
+local python = M.python
+python.pythonBuiltin = { link="Special" }
 
--- TODO: TeX (unchecked)
--- texStatement
--- texBeginEnd
--- texBeginEndName
--- texOption
--- texBeginEndModifier
--- texDocType
--- texDocTypeArgs
+-- TeX
+M.tex = {}
+local tex = M.tex
+tex.texSection = { link="Identifier" }
+tex.texStatement = { link="Function" }
+tex.texInputFile = { link="String" }
 
 -- TODO: Git (unchecked)
 -- gitcommitHeader
@@ -518,25 +438,37 @@ css.cssPseudoClassId = { link="Identifier" }
 -- gitcommitSummary
 -- gitcommitBlank
 
--- TODO: Lua (unchecked)
--- luaFuncCall
--- luaFuncArgName
--- luaFuncKeyword
--- luaLocal
--- luaBuiltIn
+-- Lua
+M.lua = {}
+local lua = M.lua
+lua.luaFunction = { link="Keyword" }
+lua.luaFunc = { link="Function" }
+lua.luaMetaMethod = { link="Identifier" }
 
--- TODO: SH (unchecked)
--- shDeref
--- shVariable
+-- SH
+M.sh = {}
+local sh = M.sh
+sh.shVarAssign = { link="Keyword" }
+sh.shDerefSimple = { link="Identifier" }
+sh.shRange = { link="Delimiter" }
+sh.shQuote = { link="String" }
+sh.shLoop = { link="Repeat" }
+sh.shFor = { link="Identifier" }
+sh.shSnglCase = { link="Delimiter" }
 
--- TODO: SQL (unchecked)
--- sqlKeyword
--- sqlFunction
--- sqlOperator
+-- SQL
+M.sql = {}
+local sql = M.sql
+sql.sqlKeyword = { link="Keyword" }
+sql.shStatement = { link="Special" }
 
--- TODO: YAML (unchecked)
--- yamlKey
--- yamlConstant
+-- YAML
+M.yaml = {}
+local yaml = M.yaml
+yaml.yamlKeyValueDelimiter = { link="Delimiter" }
+yaml.yamlBlockCollectionItemStart = { link="Delimiter" }
+yaml.yamlPlainScalar = { link="String" }
+yaml.yamlNull = { link="Special" }
 
 -- Gitgutter
 M.gitgutter = {}
