@@ -118,7 +118,7 @@ builtin.Normal =       { fg=pal.bright_white, bg=pal.black }
 builtin.NormalFloat =  { fg="NONE", bg="#343434" }
 builtin.FloatBorder =  { fg=pal.gray, bg="#343434" }
 builtin.FloatTitle =   { fg=pal.yellow, bg="#343434" }
--- builtin.NormalNC
+builtin.NormalNC =     { link="Normal" }
 builtin.Pmenu =        { fg=pal.bright_cyan, bg="#343434" } -- or #36454F
 builtin.PmenuSel =     { fg=pal.black, bg=pal.bright_black, bold=true }
 builtin.PmenuKind =    { link="Pmenu" }
@@ -130,24 +130,24 @@ builtin.PmenuThumb =   { fg="NONE", bg=pal.white }
 builtin.Question =     { fg=pal.bright_cyan, bg="NONE" }
 builtin.QuickFixLine = { link="Search" }
 builtin.Search =       { fg=pal.black, bg=pal.bright_yellow }
-builtin.SpecialKey =   { fg="#465457" }
-builtin.SpellBad =     { sp = "#FF0000", undercurl=true }
-builtin.SpellCap =     { sp = "#7070F0", font="undercurl" }
-builtin.SpellLocal =   { sp = "#70F0F0", font="undercurl" }
-builtin.SpellRare =    { sp = "#FFFFFF", font="undercurl" }
-builtin.StatusLine =   { fg="#455354" }
-builtin.StatusLineNC = { fg= "#808080", bg="#080808" }
-builtin.TabLine =      { fg=pal.black, bg="#808080" }
+builtin.SpecialKey =   { fg="#465457", bg="NONE" }
+builtin.SpellBad =     { sp=pal.red, undercurl=true }
+builtin.SpellCap =     { sp=pal.bright_blue, undercurl=true }
+builtin.SpellLocal =   { sp=pal.bright_cyan, undercurl=true }
+builtin.SpellRare =    { sp=pal.bright_white, undercurl=true }
+builtin.StatusLine =   { fg="#F8F8F2", bg="#343434" }
+builtin.StatusLineNC = { fg="#808080", bg="#080808" }
+builtin.TabLine =      { fg="#f8f8f2", bg=pal.black }
 builtin.TabLineFill =  { fg=pal.black, bg=pal.black }
--- builtin.TabLineSel
-builtin.Title =        { fg=pal.yellow }
-builtin.Visual =       { bg="#403D3D" }
-builtin.VisualNOS =    { bg="#403D3D" }
-builtin.WarningMsg =   { fg="#FFFFFF", bg="#333333" }
--- builtin.Whitespace
-builtin.WildMenu =     { fg=pal.bright_cyan, bg="#000000", bold=true }
--- builtin.WinBar
--- builtin.WinBarNC
+builtin.TabLineSel =   { fg=pal.black, bg=pal.white }
+builtin.Title =        { fg=pal.yellow, bg="NONE" }
+builtin.Visual =       { fg="NONE", bg="#403D3D" }
+builtin.VisualNOS =    { fg="NONE", bg="#403D3D" }
+builtin.WarningMsg =   { fg="#f8f8f2", bg="#343434" }
+builtin.Whitespace =   { link="NonText" }
+builtin.WildMenu =     { link="Pmenu" }
+builtin.WinBar =       { link="StatusLine" }
+builtin.WinBarNC =     { link="StatusLineNC" }
 
 -- TODO: original Monokai colors
 -- See https://github.com/textmate/monokai.tmbundle
