@@ -42,6 +42,7 @@ function M.load(style)
     utils.apply_syntax(colors.tex)
     utils.apply_syntax(colors.python)
     utils.apply_syntax(colors.go)
+    utils.apply_syntax(colors.orgmode)
 end
 
 return M

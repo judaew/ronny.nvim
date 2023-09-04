@@ -204,7 +204,7 @@ M.diagnostic = {
 -- TODO: treesitter
 M.treesitter = {}
 local ts = M.treesitter
--- @text
+ts["@text"] = { fg=pal.bright_white, bg="NONE" }
 -- @text.literal
 -- @text.reference
 -- @text.title
@@ -212,8 +212,11 @@ local ts = M.treesitter
 -- @text.underline
 -- @text.todo
 
-ts["@text.emphasis.html"] = { italic=true }
-ts["@text.strong.html"] = { bold=true }
+ts["@text.emphasis"] = { fg=ts["@text"].fg, bg=ts["@text"].bg, italic=true }
+ts["@text.strong"] = { fg=ts["@text"].fg, bg=ts["@text"].bg, bold=true }
+
+ts["@text.emphasis.html"] = { link="@text.emphasis" }
+ts["@text.strong.html"] = { link="@text.strong" }
 
 ts["@symbol"] = { link="Constant" } -- TODO: WIP
 
@@ -307,6 +310,12 @@ ts["@symbol"] = { link="Constant" } -- TODO: WIP
 -- asciidocQuotedUnconstrainedBold
 -- asciidocQuotedUnconstrainedEmphasized
 -- asciidocURL
+
+-- TODO: org-mode
+M.orgmode = {}
+local orgmode = M.orgmode
+orgmode.org_bold = { fg=ts["@text.strong"].fg, bg="NONE", bold=true }
+orgmode.org_italic = { fg=ts["@text.emphasis"].fg, bg="NONE", italic=true }
 
 -- C
 M.c = {}
