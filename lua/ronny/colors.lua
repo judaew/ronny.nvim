@@ -276,17 +276,52 @@ ts["@symbol"] = { link="Constant" } -- TODO: WIP
 -- @lsp.type.typeParameter
 -- @lsp.type.variable
 
--- TODO: Markdown (unchecked)
--- markdownBold
--- markdownCode
+-- TODO: Markdown
+M.markdown = {}
+local markdown = M.markdown
+
+markdown.markdownBold = { fg=ts["@text.strong"].fg, bg="NONE", bold=true }
+markdown.markdownItalic = { fg=ts["@text.emphasis"].fg, bg="NONE", italic=true }
+markdown.markdownCode = { link="Normal" }
+markdown.markdownCodeDelimiter = { link="Delimiter" }
+markdown.markdownHeadingDelimiter = { link="Delimiter" }
 -- markdownRule
--- markdownCodeDelimiter
--- markdownHeadingDelimiter
 -- markdownFootnote
 -- markdownFootnoteDefinition
--- markdownUrl
--- markdownLinkText
+markdown.markdownUrl = { link="Underlined" }
+markdown.markdownLinkDelimiter = { link="Delimiter" }
+markdown.markdownLinkText = { link="Identifier" }
+markdown.markdownLinkTextDelimiter = { link="Delimiter" }
 -- markdownEscape
+
+markdown.markdownH1 =          { fg=pal.yellow, bg="NONE" }
+markdown.markdownH1Delimiter = { fg=pal.yellow, bg="NONE" }
+markdown.markdownH2 =          { fg=pal.bright_cyan, bg="NONE" }
+markdown.markdownH2Delimiter = { fg=pal.bright_cyan, bg="NONE" }
+markdown.markdownH3 =          { fg=pal.bright_green, bg="NONE" }
+markdown.markdownH3Delimiter = { fg=pal.bright_green, bg="NONE" }
+markdown.markdownH4 =          { fg=pal.bright_red, bg="NONE" }
+markdown.markdownH4Delimiter = { fg=pal.bright_red, bg="NONE" }
+markdown.markdownH5 =          { fg=pal.bright_violet, bg="NONE" }
+markdown.markdownH5Delimiter = { fg=pal.bright_violet, bg="NONE" }
+markdown.markdownH6 =          { fg=pal.bright_blue, bg="NONE" }
+markdown.markdownH6Delimiter = { fg=pal.bright_blue, bg="NONE" }
+
+ts["@text.emphasis.markdown_inline"] = { link="@text.emphasis" }
+ts["@text.strong.markdown_inline"] = { link="@text.strong" }
+
+ts["@text.title.1.markdown"]        = { fg=markdown.markdownH1.fg, bg="NONE" }
+ts["@text.title.1.marker.markdown"] = { fg=markdown.markdownH1Delimiter.fg, bg="NONE" }
+ts["@text.title.2.markdown"]        = { fg=markdown.markdownH2.fg, bg="NONE" }
+ts["@text.title.2.marker.markdown"] = { fg=markdown.markdownH2Delimiter.fg, bg="NONE" }
+ts["@text.title.3.markdown"]        = { fg=markdown.markdownH3.fg, bg="NONE" }
+ts["@text.title.3.marker.markdown"] = { fg=markdown.markdownH3Delimiter.fg, bg="NONE" }
+ts["@text.title.4.markdown"]        = { fg=markdown.markdownH4.fg, bg="NONE" }
+ts["@text.title.4.marker.markdown"] = { fg=markdown.markdownH4Delimiter.fg, bg="NONE" }
+ts["@text.title.5.marker.markdown"] = { fg=markdown.markdownH5.fg, bg="NONE" }
+ts["@text.title.5.markdown"]        = { fg=markdown.markdownH5Delimiter.fg, bg="NONE" }
+ts["@text.title.6.markdown"]        = { fg=markdown.markdownH6.fg, bg="NONE" }
+ts["@text.title.6.marker.markdown"] = { fg=markdown.markdownH6Delimiter.fg, bg="NONE" }
 
 -- TODO: Asciidoc (unchecked)
 -- asciidocAttributeEntry
