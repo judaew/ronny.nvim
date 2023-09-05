@@ -146,19 +146,40 @@ builtin.WildMenu =     { link="Pmenu" }
 builtin.WinBar =       { link="StatusLine" }
 builtin.WinBarNC =     { link="StatusLineNC" }
 
--- TODO: original Monokai colors
+-- if: config.display.monokai_original
+-- Original Monokai colors
 -- See https://github.com/textmate/monokai.tmbundle
--- if config.monokai_original == true then
---     syntax.Comment =     { fg="#75715E" }
---     builtin.Normal = { fg="#F8F8F2", bg="#272822" }
---     builtin.CursorLine = { bg="#3E3D32" }
---     builtin.CursorLineNr = { fg=pal.yellow }
---     builtin.CursorColumn = { bg="#3B3A32" }
---     builtin.ColorColumn = { bg="#3B3A32" }
---     builtin.LineNr = { fg="#8F908A", bg="#272822" }
---     builtin.NonText = { fg="#75715E" }
---     builtin.SpecialKey = { fg="#75715E" }
--- end
+M.monokai_original = {}
+local monokai_original = M.monokai_original
+monokai_original.Comment =     { fg="#75715E" }
+monokai_original.Normal = { fg="#F8F8F2", bg="#272822" }
+monokai_original.CursorLine = { bg="#3E3D32" }
+monokai_original.CursorLineNr = { fg=pal.yellow }
+monokai_original.CursorColumn = { bg="#3B3A32" }
+monokai_original.ColorColumn = { bg="#3B3A32" }
+monokai_original.LineNr = { fg="#8F908A", bg="#272822" }
+monokai_original.NonText = { fg="#75715E" }
+monokai_original.SpecialKey = { fg="#75715E" }
+
+-- if: config.display.only_CursorLineNr
+-- Highlight only CursorLineNr
+M.only_CursorLineNr = {
+    CursorLine   = { fg="NONE", bg="NONE" }
+}
+
+-- if: config.display.relativenumber
+-- Highlight LineNr for relativenumbers
+M.hi_relativenumber = {
+    LineNr =       { fg=pal.white, bg="#232526" },
+    LineNrAbove =  { fg="#465457", bg="#232526"  },
+    LineNrBelow =  { fg="#465457", bg="#232526" }
+}
+
+-- if: config.display.bright_unfocus_window
+-- Highlight unfocus window
+M.hi_unfocus_window = {
+    NormalNC = { fg=pal.bright_white, bg="#333739" }
+}
 
 -- TODO: Diagnostic & LSP
 M.diagnostic = {
@@ -217,6 +238,13 @@ ts["@text.strong"] = { fg=ts["@text"].fg, bg=ts["@text"].bg, bold=true }
 
 ts["@text.emphasis.html"] = { link="@text.emphasis" }
 ts["@text.strong.html"] = { link="@text.strong" }
+
+-- if: config.display.hi_formatted_text
+-- Highlight formatted @text (emphasis, strong)
+M.hi_formatted_text = {
+    ["@text.emphasis"] = { fg=pal.yellow, bg=ts["@text"].bg, italic=true },
+    ["@text.strong"] = { fg=pal.yellow, bg=ts["@text"].bg, bold=true }
+}
 
 ts["@symbol"] = { link="Constant" } -- TODO: WIP
 
