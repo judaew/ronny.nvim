@@ -8,7 +8,7 @@ M = {
         monokai_original = false,
         only_CursorLineNr = true,
         hi_relativenumber = false,
-        hi_unfocus_window = false
+        hi_unfocus_window = false,
         hi_formatted_text = true
     }
 }
