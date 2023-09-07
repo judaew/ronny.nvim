@@ -239,6 +239,9 @@ ts["@text.strong"] = { fg=ts["@text"].fg, bg=ts["@text"].bg, bold=true }
 ts["@text.emphasis.html"] = { link="@text.emphasis" }
 ts["@text.strong.html"] = { link="@text.strong" }
 
+ts["@text.todo.unchecked.markdown"] = { fg=syntax.Comment.fg , bg="NONE", bold=true }
+ts["@text.todo.checked.markdown"]   = { fg=pal.bright_green , bg="NONE", bold=true }
+
 -- if: config.display.hi_formatted_text
 -- Highlight formatted @text (emphasis, strong)
 M.hi_formatted_text = {
