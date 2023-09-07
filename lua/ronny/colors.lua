@@ -631,7 +631,7 @@ M.nvim_cmp = {}
 local nvim_cmp = M.nvim_cmp
 
 nvim_cmp.CmpItemAbbr = { fg="#66d9ef", bg="NONE" }
-nvim_cmp.CmpItemAbbrDeprecated = { fg="#7e8e91", bg="NONE" }
+nvim_cmp.CmpItemAbbrDeprecated = { fg="#7E8E91", bg="NONE" }
 nvim_cmp.CmpItemAbbrMatch = { fg=pal.yellow, bg="NONE", bold=true }
 nvim_cmp.CmpItemAbbrMatchFuzzy = { fg=pal.yellow, bg="NONE", bold=true }
 nvim_cmp.CmpItemKind = { fg=pal.white, bg="NONE" }
