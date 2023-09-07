@@ -3,70 +3,70 @@ local config = require("ronny.config")
 
 local M = {}
 
-function M.setup(user_config)
-    config = config.update(user_config)
-
-    if config.display.monokai_original then
-        utils.apply_syntax(config.colors.monokai_original)
-    end
-
-    if config.display.only_CursorLineNr then
-        vim.o.cursorline = true
-        utils.apply_syntax(config.colors.only_CursorLineNr)
-    end
-
-    if config.display.hi_relativenumber then
-        vim.o.relativenumber = true
-        utils.apply_syntax(config.colors.hi_relativenumber)
-    end
-
-    if config.display.hi_unfocus_window then
-        utils.apply_syntax(config.colors.hi_unfocus_window)
-    end
-
-    if config.display.hi_formatted_text then
-        utils.apply_syntax(config.colors.hi_formatted_text)
-    end
-end
-
 function M.load()
-    if vim.fn.exists("syntax_on") then
-        vim.cmd("syntax reset")
-    end
-
     vim.o.termguicolors = true
     vim.g.colors_name = "ronny"
-
-    -- ronny support only dark now
     vim.o.background="dark"
-    -- vim.o.background = style or config.opts.style or vim.o.background
 
     utils.apply_syntax(config.colors.syntax)
     utils.apply_syntax(config.colors.builtin)
-    utils.apply_syntax(config.colors.whichkey)
-    utils.apply_syntax(config.colors.gitgutter)
-    utils.apply_syntax(config.colors.gitsigns)
-    utils.apply_syntax(config.colors.nvim_cmp)
-    utils.apply_syntax(config.colors.c)
-    utils.apply_syntax(config.colors.cpp)
-    utils.apply_syntax(config.colors.json)
-    utils.apply_syntax(config.colors.html)
-    utils.apply_syntax(config.colors.treesitter)
-    utils.apply_syntax(config.colors.php)
-    utils.apply_syntax(config.colors.css)
-    utils.apply_syntax(config.colors.javascript)
-    utils.apply_syntax(config.colors.typescript)
-    utils.apply_syntax(config.colors.xml)
-    utils.apply_syntax(config.colors.ruby)
-    utils.apply_syntax(config.colors.yaml)
-    utils.apply_syntax(config.colors.sql)
-    utils.apply_syntax(config.colors.sh)
-    utils.apply_syntax(config.colors.lua)
-    utils.apply_syntax(config.colors.tex)
-    utils.apply_syntax(config.colors.python)
-    utils.apply_syntax(config.colors.go)
-    utils.apply_syntax(config.colors.markdown)
-    utils.apply_syntax(config.colors.orgmode)
+end
+
+function M.setup(user_config)
+    config = config.update(user_config)
+
+    local colors = config.colors
+    local display = config.display
+    local plugins = config.plugins
+    local better_syntax = config.better_syntax
+
+    local settings = {
+        { display.monokai_original,  colors.monokai_original },
+        { display.hi_unfocus_window, colors.hi_unfocus_window },
+        { display.hi_formatted_text, colors.hi_formatted_text },
+        { display.only_CursorLineNr, colors.only_CursorLineNr, { vim_options={"cursorline"}}},
+        { display.hi_relativenumber, colors.hi_relativenumber, { vim_options={"relativenumber"}}},
+
+        { plugins.treesitter,      colors.treesitter },
+        { plugins.nvim_cmp,        colors.nvim_cmp },
+        { plugins.whichkey,        colors.whichkey },
+        { plugins.gitgutter,       colors.gitgutter },
+        { plugins.gitsigns,        colors.gitsigns },
+        { plugins.indentblankline, colors.indentblankline },
+
+        { better_syntax.c,          colors.c },
+        { better_syntax.cpp,        colors.cpp },
+        { better_syntax.json,       colors.json },
+        { better_syntax.html,       colors.html },
+        { better_syntax.php,        colors.php },
+        { better_syntax.css,        colors.css },
+        { better_syntax.javascript, colors.javascript },
+        { better_syntax.typescript, colors.typescript },
+        { better_syntax.xml,        colors.xml },
+        { better_syntax.ruby,       colors.ruby },
+        { better_syntax.yaml,       colors.yaml },
+        { better_syntax.sql,        colors.sql },
+        { better_syntax.sh,         colors.sh },
+        { better_syntax.lua,        colors.lua },
+        { better_syntax.tex,        colors.tex },
+        { better_syntax.python,     colors.python },
+        { better_syntax.go,         colors.go },
+        { better_syntax.markdown,   colors.markdown },
+        { better_syntax.orgmode,    colors.orgmode },
+    }
+
+    for _, setting in ipairs(settings) do
+        local condition, color, opts = table.unpack(setting)
+        if condition then
+            if opts then
+                for _, option in ipairs(opts.vim_options) do
+                    vim.o[option] = true
+                end
+            end
+
+            utils.apply_syntax(color)
+        end
+    end
 end
 
 return M
