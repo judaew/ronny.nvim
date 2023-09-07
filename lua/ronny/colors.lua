@@ -610,12 +610,16 @@ gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 -- BufferTabpages
 -- BufferTabpagesFill
 
--- TODO: IndentBlankLine (unchecked)
--- IndentBlanklineContextChar
--- IndentBlanklineContextStart
--- IndentBlanklineChar
--- IndentBlanklineSpaceChar
--- IndentBlanklineSpaceCharBlankline
+-- IndentBlankline
+-- TODO: #7E8E91 or pal.yellow for *ContextChar and *ContextStart
+M.indentblankline = {}
+local indentblankline = M.indentblankline
+
+indentblankline.IndentBlanklineContextChar  = { fg="#7E8E91", bg="NONE", nocombine=true }
+indentblankline.IndentBlanklineContextStart = { sp="#7E8E91", bg="NONE", nocombine=true, underline=true }
+indentblankline.IndentBlanklineChar               = { fg="#31383A", bg="NONE", nocombine=true }
+indentblankline.IndentBlanklineSpaceChar          = { fg="#31383A", bg="NONE", nocombine=true }
+indentblankline.IndentBlanklineSpaceCharBlankline = { fg="#31383A", bg="NONE", nocombine=true }
 
 -- TODO: COC.nvim (unchecked)
 -- CocHighlightText
