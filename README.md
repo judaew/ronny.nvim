@@ -59,7 +59,7 @@ require("ronny").setup({
 
 ## Extra folder
 
-...
+- [kitty](https://sw.kovidgoyal.net/kitty/) color scheme, [go](./extra/kitty/ronny.conf).
 
 ## Something is broken but I know how to fix it!
 
