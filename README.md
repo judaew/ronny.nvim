@@ -6,7 +6,7 @@ ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim),
 
 ## Supported Plugins
 
-- [ ] [LSP](https://github.com/neovim/nvim-lspconfig)
+- [x] [LSP](https://github.com/neovim/nvim-lspconfig)/[Diagnostics](https://neovim.io/doc/user/diagnostic.html)
 - [ ] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [ ] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [ ] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)

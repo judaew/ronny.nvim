@@ -181,46 +181,41 @@ M.hi_unfocus_window = {
     NormalNC = { fg=pal.bright_white, bg="#333739" }
 }
 
--- TODO: Diagnostic & LSP
-M.diagnostic = {
-    -- DiagnosticError
-    -- DiagnosticWarn
-    -- DiagnosticInfo
-    -- DiagnosticHint
-    -- DiagnosticOk
-    -- DiagnosticUnderlineError
-    -- DiagnosticUnderlineWarn
-    -- DiagnosticUnderlineInfo
-    -- DiagnosticUnderlineHint
-    -- DiagnosticUnderlineOk
-    -- DiagnosticVirtualTextError
-    -- DiagnosticVirtualTextWarn
-    -- DiagnosticVirtualTextInfo
-    -- DiagnosticVirtualTextHint
-    -- DiagnosticVirtualTextOk
-    -- DiagnosticFloatingError
-    -- DiagnosticFloatingWarn
-    -- DiagnosticFloatingInfo
-    -- DiagnosticFloatingHint
-    -- DiagnosticFloatingOk
-    -- DiagnosticSignError
-    -- DiagnosticSignWarn
-    -- DiagnosticSignInfo
-    -- DiagnosticSignHint
-    -- DiagnosticSignOk
-    -- DiagnosticDeprecated
-    -- DiagnosticUnnecessary
-    -- LspReferenceText
-    -- LspReferenceRead
-    -- LspReferenceWrite
-}
+-- Diagnostic & LSP
+M.diagnostic = {}
+local diag = M.diagnostic
 
--- TODO: LSPInfo?
--- LspInfoBorder
--- LspInfoFiletype
--- LspInfoTitle
--- LspInfoTip
--- LspInfoList
+diag.DiagnosticError = { fg=pal.bright_red, bg="NONE" }
+diag.DiagnosticWarn  = { fg=pal.bright_yellow, bg="NONE" }
+diag.DiagnosticInfo  = { fg=pal.white, bg="NONE" }
+diag.DiagnosticHint  = { fg=pal.white, bg="NONE" }
+diag.DiagnosticOk    = { fg=pal.bright_green, bg="NONE" }
+
+diag.DiagnosticUnderlineError = { fg="NONE", bg="NONE", sp=pal.red, underline=true }
+diag.DiagnosticUnderlineWarn  = { fg="NONE", bg="NONE", sp=pal.bright_yellow, underline=true }
+diag.DiagnosticUnderlineInfo  = { fg="NONE", bg="NONE", sp=pal.bright_black, underline=true }
+diag.DiagnosticUnderlineHint  = { fg="NONE", bg="NONE", sp=pal.bright_black, underline=true }
+diag.DiagnosticUnderlineOk    = { fg="NONE", bg="NONE", sp=pal.bright_green, underline=true }
+
+diag.DiagnosticVirtualTextError = { fg=pal.red, bg="NONE" }
+diag.DiagnosticVirtualTextWarn  = { link="DiagnosticWarn" }
+diag.DiagnosticVirtualTextInfo  = { link="DiagnosticInfo" }
+diag.DiagnosticVirtualTextHint  = { link="DiagnosticHint" }
+diag.DiagnosticVirtualTextOk    = { link="DiagnosticOk" }
+
+diag.DiagnosticFloatingError = { fg=pal.red, bg="NONE" }
+diag.DiagnosticFloatingWarn  = { link="DiagnosticWarn" }
+diag.DiagnosticFloatingInfo  = { link="DiagnosticInfo" }
+diag.DiagnosticFloatingHint  = { link="DiagnosticHint" }
+diag.DiagnosticFloatingOk    = { link="DiagnosticOk" }
+
+diag.DiagnosticDeprecated = { fg="NONE", bg="NONE", sp="NONE", strikethrough=true }
+diag.DiagnosticUnnecessary = { link="Comment" }
+
+-- TODO: See :h lsp-highlight
+-- diag.LspReferenceText  = {}
+-- diag.LspReferenceRead  = {}
+-- diag.LspReferenceWrite = {}
 
 -- TODO: treesitter
 M.treesitter = {}

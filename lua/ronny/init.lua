@@ -10,6 +10,7 @@ function M.load()
 
     utils.apply_syntax(config.colors.syntax)
     utils.apply_syntax(config.colors.builtin)
+    utils.apply_syntax(config.colors.diagnostic)
 end
 
 function M.setup(user_config)
