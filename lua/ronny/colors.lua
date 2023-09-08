@@ -212,10 +212,10 @@ diag.DiagnosticFloatingOk    = { link="DiagnosticOk" }
 diag.DiagnosticDeprecated = { fg="NONE", bg="NONE", sp="NONE", strikethrough=true }
 diag.DiagnosticUnnecessary = { link="Comment" }
 
--- TODO: See :h lsp-highlight
--- diag.LspReferenceText  = {}
--- diag.LspReferenceRead  = {}
--- diag.LspReferenceWrite = {}
+-- See `:h lsp-highlight`
+diag.LspReferenceText  = { fg="NONE", bg=pal.black3 }
+diag.LspReferenceRead  = { fg="NONE", bg=pal.black3 }
+diag.LspReferenceWrite = { fg="NONE", bg=pal.black3 }
 
 -- TODO: treesitter
 M.treesitter = {}
