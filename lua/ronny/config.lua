@@ -4,6 +4,7 @@ local M = {}
 
 M = {
     colors = colors,
+    -- TODO: italic comments
     display = {
         monokai_original  = false,
         only_CursorLineNr = true,
