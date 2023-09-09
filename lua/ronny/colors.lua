@@ -39,10 +39,10 @@ local syntax = M.syntax
 syntax.Comment =      { fg=pal.gray, bg="NONE" }
 syntax.Constant =     { fg=pal.violet, bg="NONE" }
 syntax.String =       { fg=pal.bright_yellow, bg="NONE" }
-syntax.Character =    { fg=pal.bright_yellow, bg="NONE"  }
+syntax.Character =    { fg=pal.bright_yellow, bg="NONE", italic=true }
 syntax.Number =       { fg=pal.violet, bg="NONE" }
-syntax.Boolean =      { fg=pal.violet, bg="NONE" }
-syntax.Float =        { fg=pal.violet, bg="NONE" }
+syntax.Boolean =      { fg=pal.violet, bg="NONE", bold=true }
+syntax.Float =        { fg=pal.violet, bg="NONE", italic=true }
 syntax.Identifier =   { fg=pal.yellow, bg="NONE" }
 syntax.Function =     { fg=pal.bright_green, bg="NONE" }
 syntax.Statement =    { fg=pal.bright_red, bg="NONE" }
@@ -59,13 +59,13 @@ syntax.Macro =        { fg=pal.bright_green, bg="NONE" }
 syntax.PreCondit =    { fg=pal.bright_green, bg="NONE" }
 syntax.Type =         { fg=pal.bright_cyan, bg="NONE" }
 syntax.StorageClass = { fg=pal.yellow, bg ="NONE", italic=true }
-syntax.Structure =    { fg=pal.bright_cyan, bg="NONE", italic=true }
+syntax.Structure =    { fg=pal.bright_cyan, bg="NONE" }
 syntax.Typedef =      { fg=pal.bright_cyan, bg="NONE" }
 syntax.Special =      { fg=pal.bright_cyan, bg="NONE", italic=true }
-syntax.SpecialChar =  { fg=pal.bright_red, bg="NONE", italic=true }
-syntax.Tag =          { fg=pal.bright_red, bg="NONE", italic=true }
+syntax.SpecialChar =  { fg=pal.bright_red, bg="NONE" }
+syntax.Tag =          { fg=pal.bright_red, bg="NONE" }
 syntax.Delimiter =    { fg=syntax.Comment.fg, bg="NONE" }
-syntax.SpecialComment = { fg=syntax.Comment.fg, bg="NONE", italic=true }
+syntax.SpecialComment = { fg=syntax.Comment.fg, bg="NONE" }
 syntax.Debug =        { fg="#BCA3A3", bg="NONE" }
 syntax.Underlined =   { fg="#0A95FF", bg="NONE", sp=pal.blue, undercurl=true }
 syntax.Ignore =       { fg=pal.bright_black, bg="NONE" }
