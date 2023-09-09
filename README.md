@@ -7,7 +7,7 @@ ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim),
 ## Supported Plugins
 
 - [x] [LSP](https://github.com/neovim/nvim-lspconfig)/[Diagnostics](https://neovim.io/doc/user/diagnostic.html)
-- [ ] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [x] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [ ] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [ ] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) and [nvim-compe](https://github.com/hrsh7th/nvim-compe)
@@ -18,14 +18,14 @@ ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim),
 
 ## Installation
 
-Install via package manager:
+Install via package manager (e.g. [packer.nvim](https://github.com/wbthomason/packer.nvim) or [lazy.nvim](https://github.com/folke/lazy.nvim)):
 
 ```lua
--- Packer:
+-- packer.nvim:
 vim.cmd.colorscheme("ronny")
 use "Mofiqul/vscode.nvim"
 
--- Lazy:
+-- lazy.nvim:
 {
     "judaew/ronny.nvim",
     priority = 1000,
