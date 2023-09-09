@@ -32,7 +32,7 @@ M.palette = {
 
 local pal = M.palette
 
--- See :help group-name
+--- Syntax (see :help group-name)
 M.syntax = {}
 local syntax = M.syntax
 
@@ -72,7 +72,7 @@ syntax.Ignore =       { fg=pal.bright_black, bg="NONE" }
 syntax.Error =        { fg="NONE", bg="NONE", sp=pal.red, underline=true }
 syntax.Todo =         { fg=pal.black, bg=pal.bright_cyan, bold=true }
 
--- See :help highlight-default
+--- Builtin (see :help highlight-default)
 -- TEST: float window
 -- :lua vim.api.nvim_open_win(0, true, { relative='win', width=120, height=15, border="single", win = 1001, row = 20, col = 20, zindex=zindex })
 M.builtin = {}
@@ -181,7 +181,7 @@ M.hi_unfocus_window = {
     NormalNC = { fg=pal.bright_white, bg="#333739" }
 }
 
--- Diagnostic & LSP
+--- Diagnostic & LSP
 M.diagnostic = {}
 local diag = M.diagnostic
 
@@ -349,8 +349,7 @@ markdown.markdownH5Delimiter = { fg=pal.bright_violet, bg="NONE" }
 markdown.markdownH6          = { fg=pal.bright_blue,   bg="NONE" }
 markdown.markdownH6Delimiter = { fg=pal.bright_blue,   bg="NONE" }
 
-
--- TODO: Asciidoc (unchecked)
+--- TODO: Asciidoc (unchecked)
 -- asciidocAttributeEntry
 -- asciidocAttributeList
 -- asciidocAttributeRef
@@ -373,13 +372,13 @@ markdown.markdownH6Delimiter = { fg=pal.bright_blue,   bg="NONE" }
 -- asciidocQuotedUnconstrainedEmphasized
 -- asciidocURL
 
--- TODO: org-mode
+--- TODO: org-mode
 M.orgmode = {}
 local orgmode = M.orgmode
 orgmode.org_bold = { fg=ts["@text.strong"].fg, bg="NONE", bold=true }
 orgmode.org_italic = { fg=ts["@text.emphasis"].fg, bg="NONE", italic=true }
 
--- C
+--- C
 M.c = {}
 local c = M.c
 
@@ -389,26 +388,26 @@ c.cPreCondit = { link="PreProc" }
 c.cPreConditMatch = { link="PreProc" }
 c.cDefine = { link="Define" }
 
--- CPP
+--- CPP
 M.cpp = {}
 local cpp = M.cpp
 cpp.cppAccess = { link="Type" }
 cpp.cppStructure = { link="Keyword" }
 
--- JSON
+--- JSON
 M.json = {}
 local json = M.json
 
 json.jsonNull = { link="Special" }
 json.jsonQuote = { link="Delimiter" }
 
--- HTML
+--- HTML
 M.html = {}
 local html = M.html
 html.htmlTag = { link="Tag" }
 html.htmlEndTag = { link="Tag" }
 
--- PHP
+--- PHP
 M.php = {}
 local php = M.php
 php.phpVarSelector = { link="Identifier" }
@@ -417,7 +416,7 @@ php.phpStorageClass = { link="Type" }
 php.phpMemberSelector = { link="Operator" }
 php.phpClasses = { link="Type" }
 
--- CSS
+--- CSS
 M.css = {}
 local css = M.css
 css.cssTagName = { link="Type" }
@@ -427,7 +426,7 @@ css.cssClassNameDot = { link="Delimiter" }
 css.cssIdentifier = { link="Identifier" }
 css.cssPseudoClassId = { link="Identifier" }
 
--- JavaScript
+--- JavaScript
 M.javascript = {}
 local javascript = M.javascript
 javascript.javaScriptParens = { link="Delimiter" }
@@ -435,7 +434,7 @@ javascript.javaScriptBraces = { link="Delimiter" }
 javascript.javaScriptIdentifier = { link="Keyword" }
 javascript.javaScriptFunction = { link="Keyword" }
 
--- Typescript
+--- Typescript
 M.typescript = {}
 local typescript = M.typescript
 typescript.typescriptVariable = { link="Keyword" }
@@ -462,7 +461,7 @@ typescript.typescriptCall = { link="Identifier" }
 typescript.typescriptFuncComma = { link="Delimiter" }
 typescript.typescriptTypeParameter = { link="Type" }
 
--- XML
+--- XML
 M.xml = {}
 local xml = M.xml
 xml.xmlTag = { link="Tag" }
@@ -471,12 +470,12 @@ xml.xmlAttrib = { link="Tag" }
 xml.xmlProcessing = { link="Tag" }
 xml.xmlEqual = { link="Delimiter" }
 
--- Ruby
+--- Ruby
 M.ruby = {}
 local ruby = M.ruby
 ruby.rubyCurlyBlockDelimiter = { link="Delimiter" }
 
--- Golang
+--- Golang
 M.go = {}
 local go = M.go
 go.goFormatSpecifier = { link="SpecialChar" }
@@ -484,19 +483,19 @@ go.goEscapeC = { link="SpecialChar" }
 go.goBuiltins = { link="Special" }
 go.goPredefinedIdentifiers = { link="Special" }
 
--- Python
+--- Python
 M.python = {}
 local python = M.python
 python.pythonBuiltin = { link="Special" }
 
--- TeX
+--- TeX
 M.tex = {}
 local tex = M.tex
 tex.texSection = { link="Identifier" }
 tex.texStatement = { link="Function" }
 tex.texInputFile = { link="String" }
 
--- TODO: Git (unchecked)
+--- TODO: Git (unchecked)
 -- gitcommitHeader
 -- gitcommitOnBranch
 -- gitcommitBranch
@@ -509,14 +508,14 @@ tex.texInputFile = { link="String" }
 -- gitcommitSummary
 -- gitcommitBlank
 
--- Lua
+--- Lua
 M.lua = {}
 local lua = M.lua
 lua.luaFunction = { link="Keyword" }
 lua.luaFunc = { link="Function" }
 lua.luaMetaMethod = { link="Identifier" }
 
--- SH
+--- SH
 M.sh = {}
 local sh = M.sh
 sh.shVarAssign = { link="Keyword" }
@@ -527,13 +526,13 @@ sh.shLoop = { link="Repeat" }
 sh.shFor = { link="Identifier" }
 sh.shSnglCase = { link="Delimiter" }
 
--- SQL
+--- SQL
 M.sql = {}
 local sql = M.sql
 sql.sqlKeyword = { link="Keyword" }
 sql.shStatement = { link="Special" }
 
--- YAML
+--- YAML
 M.yaml = {}
 local yaml = M.yaml
 yaml.yamlKeyValueDelimiter = { link="Delimiter" }
@@ -541,7 +540,7 @@ yaml.yamlBlockCollectionItemStart = { link="Delimiter" }
 yaml.yamlPlainScalar = { link="String" }
 yaml.yamlNull = { link="Special" }
 
--- Gitgutter
+--- Gitgutter
 M.gitgutter = {}
 local gitgutter = M.gitgutter
 gitgutter.GitGutterAdd    = { fg=pal.bright_green, bg="#232526", bold=true}
@@ -551,7 +550,7 @@ gitgutter.GitGutterAddLine    = { fg=pal.black, bg=pal.bright_green }
 gitgutter.GitGutterChangeLine = { fg=pal.black, bg=pal.bright_black }
 gitgutter.GitGutterDeleteLine = { fg=pal.black, bg=pal.bright_red }
 
--- Git Signs
+--- Git Signs
 M.gitsigns = {}
 local gitsigns = M.gitsigns
 
@@ -562,7 +561,7 @@ gitsigns.GitSignsAddLn    = { fg=pal.black, bg=pal.bright_green }
 gitsigns.GitSignsChangeLn = { fg=pal.black, bg=pal.bright_black }
 gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 
--- TODO: NvimTree (unchecked)
+--- TODO: NvimTree (unchecked)
 -- NvimTreeRootFolder
 -- NvimTreeGitDirty
 -- NvimTreeGitNew
@@ -583,11 +582,11 @@ gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 -- NvimTreeGitDirty
 -- NvimTreeGitNew
 
--- TODO: Bufferline (unchecked)
+--- TODO: Bufferline (unchecked)
 -- BufferLineIndicatorSelected
 -- BufferLineFill
 
--- TODO: BarBar (unchecked)
+--- TODO: BarBar (unchecked)
 -- BufferCurrent
 -- BufferCurrentIndex
 -- BufferCurrentMod
@@ -606,8 +605,7 @@ gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 -- BufferTabpages
 -- BufferTabpagesFill
 
--- IndentBlankline
--- TODO: #7E8E91 or pal.yellow for *ContextChar and *ContextStart
+--- IndentBlankline
 M.indentblankline = {}
 local indentblankline = M.indentblankline
 
@@ -617,12 +615,12 @@ indentblankline.IndentBlanklineChar               = { fg="#31383A", bg="NONE", n
 indentblankline.IndentBlanklineSpaceChar          = { fg="#31383A", bg="NONE", nocombine=true }
 indentblankline.IndentBlanklineSpaceCharBlankline = { fg="#31383A", bg="NONE", nocombine=true }
 
--- TODO: COC.nvim (unchecked)
+--- TODO: COC.nvim (unchecked)
 -- CocHighlightText
 -- CocHighlightRead
 -- CocHighlightWrite
 
--- nvim-cmp
+--- nvim-cmp
 M.nvim_cmp = {}
 local nvim_cmp = M.nvim_cmp
 
@@ -633,7 +631,7 @@ nvim_cmp.CmpItemAbbrMatchFuzzy = { fg=pal.yellow, bg="NONE", bold=true }
 nvim_cmp.CmpItemKind = { fg=pal.white, bg="NONE" }
 nvim_cmp.CmpItemMenu = { fg=pal.gray, bg="NONE" }
 
--- TODO: Telescope (unchecked)
+--- TODO: Telescope (unchecked)
 -- TelescopePromptBorder
 -- TelescopeResultsBorder
 -- TelescopePreviewBorder
@@ -643,17 +641,17 @@ nvim_cmp.CmpItemMenu = { fg=pal.gray, bg="NONE" }
 -- TelescopeMatching
 -- TelescopePromptPrefix
 
--- TODO: DapUI (?)
--- TODO: DevIcon (?)
+--- TODO: DapUI (?)
+--- TODO: DevIcon (?)
 
--- WhickKey
+--- WhickKey
 M.whichkey = {}
 local whichkey = M.whichkey
 
 whichkey.WhichKeyFloat = { fg="NONE", bg="#171717" }
 
--- TODO: Dashboard (?)
--- TODO: hlargs.nvim (?)
+--- TODO: Dashboard (?)
+--- TODO: hlargs.nvim (?)
 
 -- TODO: background
 if vim.opt.background == "dark" then
