@@ -29,8 +29,9 @@ function M.setup(user_config)
         { display.hi_relativenumber, colors.hi_relativenumber, { vim_options={"relativenumber"}}},
 
         { plugins.treesitter,      colors.treesitter },
-        { plugins.nvim_cmp,        colors.nvim_cmp },
         { plugins.telescope,       colors.telescope },
+        { plugins.nvimtree,        colors.nvimtree },
+        { plugins.nvim_cmp,        colors.nvim_cmp },
         { plugins.whichkey,        colors.whichkey },
         { plugins.gitgutter,       colors.gitgutter },
         { plugins.gitsigns,        colors.gitsigns },

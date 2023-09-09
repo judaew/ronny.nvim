@@ -86,7 +86,7 @@ builtin.Cursor =       { fg=pal.black, bg=pal.white }
 -- builtin.CursorIM =     {}
 builtin.CursorColumn = { fg="NONE", bg=pal.black2 }
 builtin.CursorLine =   { fg="NONE", bg=pal.black3 }
-builtin.Directory =    { fg=pal.bright_green, bg="NONE" }
+builtin.Directory =    { fg=pal.blue, bg="NONE", bold=true }
 builtin.DiffAdd =      { fg=pal.green, bg="NONE", bold=true }
 builtin.DiffChange =   { fg=pal.bright_black, bg="NONE", bold=true }
 builtin.DiffDelete =   { fg=pal.bright_red, bg="NONE", bold=true }
@@ -561,26 +561,16 @@ gitsigns.GitSignsAddLn    = { fg=pal.black, bg=pal.bright_green }
 gitsigns.GitSignsChangeLn = { fg=pal.black, bg=pal.bright_black }
 gitsigns.GitSignsDeleteLn = { fg=pal.black, bg=pal.bright_red }
 
---- TODO: NvimTree (unchecked)
--- NvimTreeRootFolder
--- NvimTreeGitDirty
--- NvimTreeGitNew
--- NvimTreeImageFile
--- NvimTreeEmptyFolderName
--- NvimTreeFolderName
--- NvimTreeSpecialFile
--- NvimTreeNormal
--- NvimTreeCursorLine
--- NvimTreeVertSplit
--- NvimTreeEndOfBuffer
--- NvimTreeOpenedFolderName
--- NvimTreeGitRenamed
--- NvimTreeGitIgnored
--- NvimTreeGitDeleted
--- NvimTreeGitStaged
--- NvimTreeGitMerge
--- NvimTreeGitDirty
--- NvimTreeGitNew
+--- NvimTree
+M.nvimtree = {}
+local nvimtree = M.nvimtree
+
+nvimtree.NvimTreeRootFolder  = { link="Title" }
+nvimtree.NvimTreeSpecialFile = { fg=pal.cyan, bg="NONE" }
+nvimtree.NvimTreeGitDirty    = { fg=pal.bright_yellow, bg="NONE" }
+nvimtree.NvimTreeGitNew      = { fg=pal.gray }
+nvimtree.NvimTreeGitStaged   = { fg=pal.bright_green, bg="NONE" }
+nvimtree.NvimTreeGitMerge    = { fg=pal.violet, bg="NONE" }
 
 --- TODO: Bufferline (unchecked)
 -- BufferLineIndicatorSelected
