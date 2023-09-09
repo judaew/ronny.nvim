@@ -28,22 +28,25 @@ use "Mofiqul/vscode.nvim"
 
 ```lua
 require("ronny").setup({
-    colors = {
-        syntax = {
-            Comment = { fg="#7E8E91", bg="NONE" }
-            -- ...
-        }
-        -- ...
-    },
     display = {
-        monokai_original = false,
+        -- Enable original Monokai colors
+        monokai_original  = false,
+        -- Highlight only LineNr (current line number) for cursorline
+        -- option. This also enables cursorline (:set cursorline)
         only_CursorLineNr = true,
+        -- Highlight LineNr for relativenumbers. This also enables
+        -- relativenumbers option (:set relativenumbers)
         hi_relativenumber = false,
+        -- Highlight unfocused windows when using :split or :vsplit
         hi_unfocus_window = false,
+        -- Highlight formatted @text (e.g., italic, strong) in yellow
+        -- in addition to font attributes to make the text more visible
         hi_formatted_text = true
     }
 })
 ```
+
+Additional optional config can be located in [config.lua](lua/ronny/config.lua).
 
 ## Supported Plugins
 
