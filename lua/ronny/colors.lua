@@ -128,10 +128,10 @@ builtin.Question     = { fg=pal.bright_cyan, bg="NONE" }
 builtin.QuickFixLine = { link="Search" }
 builtin.Search       = { fg=pal.black, bg=pal.bright_yellow }
 builtin.SpecialKey   = { fg=pal.gray2, bg="NONE" }
-builtin.SpellBad     = { sp=pal.red, undercurl=true }
-builtin.SpellCap     = { sp=pal.bright_blue, undercurl=true }
-builtin.SpellLocal   = { sp=pal.bright_cyan, undercurl=true }
-builtin.SpellRare    = { sp=pal.bright_white, undercurl=true }
+builtin.SpellBad     = { fg="NONE", bg="NONE", sp=pal.red, undercurl=true }
+builtin.SpellCap     = { fg="NONE", bg="NONE", sp=pal.bright_blue, undercurl=true }
+builtin.SpellLocal   = { fg="NONE", bg="NONE", sp=pal.bright_cyan, undercurl=true }
+builtin.SpellRare    = { fg="NONE", bg="NONE", sp=pal.bright_white, undercurl=true }
 builtin.StatusLine   = { fg=pal.bright_white, bg=pal.black3 }
 builtin.StatusLineNC = { fg=pal.bright_black, bg="#080808" }
 builtin.TabLine      = { fg=pal.bright_white, bg=pal.black }
@@ -152,15 +152,15 @@ builtin.WinBarNC     = { link="StatusLineNC" }
 M.monokai_original = {}
 local monokai_original        = M.monokai_original
 
-monokai_original.Comment      = { fg="#75715E" }
+monokai_original.Comment      = { fg="#75715E", bg="NONE" }
 monokai_original.Normal       = { fg="#F8F8F2", bg="#272822" }
-monokai_original.CursorLine   = { bg="#3E3D32" }
-monokai_original.CursorLineNr = { fg=pal.yellow }
-monokai_original.CursorColumn = { bg="#3B3A32" }
-monokai_original.ColorColumn  = { bg="#3B3A32" }
+monokai_original.CursorLine   = { fg="NONE", bg="#3E3D32" }
+monokai_original.CursorLineNr = { fg=pal.yellow, bg="NONE" }
+monokai_original.CursorColumn = { link="CursorLine" }
+monokai_original.ColorColumn  = { link="CursorLine" }
 monokai_original.LineNr       = { fg="#8F908A", bg="#272822" }
-monokai_original.NonText      = { fg="#75715E" }
-monokai_original.SpecialKey   = { fg="#75715E" }
+monokai_original.NonText      = { fg="#75715E", bg="NONE" }
+monokai_original.SpecialKey   = { fg="#75715E", bg="NONE" }
 
 -- if: config.display.only_CursorLineNr
 -- Highlight only CursorLineNr
@@ -585,7 +585,7 @@ local nvimtree = M.nvimtree
 nvimtree.NvimTreeRootFolder  = { link="Title" }
 nvimtree.NvimTreeSpecialFile = { fg=pal.cyan, bg="NONE" }
 nvimtree.NvimTreeGitDirty    = { fg=pal.bright_yellow, bg="NONE" }
-nvimtree.NvimTreeGitNew      = { fg=pal.gray }
+nvimtree.NvimTreeGitNew      = { fg=pal.gray, bg="NONE" }
 nvimtree.NvimTreeGitStaged   = { fg=pal.bright_green, bg="NONE" }
 nvimtree.NvimTreeGitMerge    = { fg=pal.violet, bg="NONE" }
 
