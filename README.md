@@ -11,10 +11,12 @@ ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim),
 - [x] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [x] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) and [nvim-compe](https://github.com/hrsh7th/nvim-compe)
-- [x] [Git Gutter](https://github.com/airblade/vim-gitgutter) and [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-- [ ] [Lualine](https://github.com/hoob3rt/lualine.nvim)
-- [x] [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [x] [Which Key](https://github.com/folke/which-key.nvim)
+- [x] [Git Gutter](https://github.com/airblade/vim-gitgutter) and [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+- [x] [Lualine](https://github.com/hoob3rt/lualine.nvim)
+- [ ] [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+- [ ] [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+- [x] [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 
 ## Installation
 
