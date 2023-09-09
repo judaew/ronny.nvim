@@ -80,7 +80,7 @@ local builtin = M.builtin
 
 builtin.ColorColumn  = { fg="NONE", bg=pal.black2 }
 builtin.Conceal      = { fg=syntax.Comment.fg, bg="NONE" }
-builtin.CurSearch .  = { fg=pal.black, bg=pal.yellow }
+builtin.CurSearch    = { fg=pal.black, bg=pal.yellow }
 builtin.Cursor       = { fg=pal.black, bg=pal.white }
 -- builtin.lCursor  = {}
 -- builtin.CursorIM = {}
