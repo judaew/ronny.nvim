@@ -631,15 +631,14 @@ nvim_cmp.CmpItemAbbrMatchFuzzy = { fg=pal.yellow, bg="NONE", bold=true }
 nvim_cmp.CmpItemKind = { fg=pal.white, bg="NONE" }
 nvim_cmp.CmpItemMenu = { fg=pal.gray, bg="NONE" }
 
---- TODO: Telescope (unchecked)
--- TelescopePromptBorder
--- TelescopeResultsBorder
--- TelescopePreviewBorder
--- TelescopeNormal
--- TelescopeSelection
--- TelescopeMultiSelection
--- TelescopeMatching
--- TelescopePromptPrefix
+--- Telescope
+M.telescope = {}
+local telescope = M.telescope
+
+telescope.TelescopeBorder        =  { fg=pal.black, bg="NONE" }
+telescope.TelescopeTitle         = { link="Title" }
+telescope.TelescopeMatching      = { fg=pal.yellow, bg="NONE", bold=true }
+telescope.TelescopePromptCounter = { fg=pal.white, bg="NONE" }
 
 --- TODO: DapUI (?)
 --- TODO: DevIcon (?)

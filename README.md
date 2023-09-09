@@ -8,7 +8,7 @@ ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim),
 
 - [x] [LSP](https://github.com/neovim/nvim-lspconfig)/[Diagnostics](https://neovim.io/doc/user/diagnostic.html)
 - [x] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [ ] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [x] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [ ] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) and [nvim-compe](https://github.com/hrsh7th/nvim-compe)
 - [x] [Git Gutter](https://github.com/airblade/vim-gitgutter) and [Git Signs](https://github.com/lewis6991/gitsigns.nvim)

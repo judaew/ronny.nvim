@@ -30,6 +30,7 @@ function M.setup(user_config)
 
         { plugins.treesitter,      colors.treesitter },
         { plugins.nvim_cmp,        colors.nvim_cmp },
+        { plugins.telescope,       colors.telescope },
         { plugins.whichkey,        colors.whichkey },
         { plugins.gitgutter,       colors.gitgutter },
         { plugins.gitsigns,        colors.gitsigns },

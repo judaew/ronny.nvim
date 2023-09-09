@@ -15,6 +15,7 @@ M = {
     plugins = {
         treesitter      = true,
         nvim_cmp        = true,
+        telescope       = true,
         whichkey        = true,
         gitgutter       = true,
         gitsigns        = true,
