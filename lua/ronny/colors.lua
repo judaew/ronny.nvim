@@ -217,25 +217,94 @@ diag.LspReferenceText  = { fg="NONE", bg=pal.black3 }
 diag.LspReferenceRead  = { fg="NONE", bg=pal.black3 }
 diag.LspReferenceWrite = { fg="NONE", bg=pal.black3 }
 
--- TODO: treesitter
+--- TreeSitter
 M.treesitter = {}
 local ts = M.treesitter
-ts["@text"] = { fg=pal.bright_white, bg="NONE" }
--- @text.literal
--- @text.reference
--- @text.title
--- @text.uri
--- @text.underline
--- @text.todo
 
+-- Default
+ts["@text"]              = { fg="NONE", bg="NONE" }
+ts["@text.literal"]      = { link ="Comment" }
+ts["@text.reference"]    = { link ="Identifier" }
+ts["@text.title"]        = { link ="Title" }
+ts["@text.uri"]          = { link ="Underlined" }
+ts["@text.underline"]    = { link ="Underlined" }
+ts["@text.todo"]         = { link ="Todo" }
+ts["@comment"]           = { link="Comment" }
+ts["@punctuation"]       = { link="Delimiter" }
+ts["@constant"]          = { link="Constant" }
+ts["@constant.builtin"]  = { link="Special" }
+ts["@constant.macro"]    = { link="Define" }
+ts["@define"]            = { link="Define" }
+ts["@macro"]             = { link="Macro" }
+ts["@string"]            = { link="String" }
+ts["@string.escape"]     = { link="SpecialChar" }
+ts["@string.special"]    = { link="SpecialChar" }
+ts["@character"]         = { link="Character" }
+ts["@character.special"] = { link="SpecialChar" }
+ts["@number"]            = { link="Number" }
+ts["@boolean"]           = { link="Boolean" }
+ts["@float"]             = { link="Float" }
+ts["@function"]          = { link="Function" }
+ts["@function.builtin"]  = { link="Special" }
+ts["@function.macro"]    = { link="Macro" }
+ts["@parameter"]         = { link="Identifier" }
+ts["@method"]            = { link="Function" }
+ts["@field"]             = { link="Identifier" }
+ts["@property"]          = { link="Identifier" }
+ts["@constructor"]       = { link="Special" }
+ts["@repeat"]            = { link="Repeat" }
+ts["@label"]             = { link="Label" }
+ts["@operator"]          = { link="Operator" }
+ts["@keyword"]           = { link="Keyword" }
+ts["@exception"]         = { link="Exception" }
+ts["@variable"]          = { link="Identifier" }
+ts["@type"]              = { link="Type" }
+ts["@type.definition"]   = { link="Typedef" }
+ts["@storageclass"]      = { link="StorageClass" }
+ts["@namespace"]         = { link="Identifier" }
+ts["@include"]           = { link="Include" }
+ts["@preproc"]           = { link="PreProc" }
+ts["@debug"]             = { link="Debug" }
+ts["@tag"]               = { link="Tag" }
+ts["@lsp.type.class"]         = { link="Structure" }
+ts["@lsp.type.comment"]       = { link="Comment" }
+ts["@lsp.type.decorator"]     = { link="Function" }
+ts["@lsp.type.enum"]          = { link="Structure" }
+ts["@lsp.type.enumMember"]    = { link="Constant" }
+ts["@lsp.type.function"]      = { link="Function" }
+ts["@lsp.type.interface"]     = { link="Structure" }
+ts["@lsp.type.macro"]         = { link="Macro" }
+ts["@lsp.type.method"]        = { link="Function" }
+ts["@lsp.type.namespace"]     = { link="Structure" }
+ts["@lsp.type.parameter"]     = { link="Identifier" }
+ts["@lsp.type.property"]      = { link="Identifier" }
+ts["@lsp.type.struct"]        = { link="Structure" }
+ts["@lsp.type.type"]          = { link="Type" }
+ts["@lsp.type.typeParameter"] = { link="Typedef" }
+ts["@lsp.type.variable"]      = { link="Identifier" }
+
+-- Non-default
+ts["@text"]          = { fg=pal.bright_white, bg="NONE" }
 ts["@text.emphasis"] = { fg=ts["@text"].fg, bg=ts["@text"].bg, italic=true }
-ts["@text.strong"] = { fg=ts["@text"].fg, bg=ts["@text"].bg, bold=true }
+ts["@text.strong"]   = { fg=ts["@text"].fg, bg=ts["@text"].bg, bold=true }
 
-ts["@text.emphasis.html"] = { link="@text.emphasis" }
-ts["@text.strong.html"] = { link="@text.strong" }
+ts["@text.emphasis.markdown_inline"] = { link="@text.emphasis" }
+ts["@text.strong.markdown_inline"]   = { link="@text.strong" }
+ts["@text.todo.unchecked.markdown"]  = { fg=syntax.Comment.fg , bg="NONE", bold=true }
+ts["@text.todo.checked.markdown"]    = { fg=pal.bright_green , bg="NONE", bold=true }
 
-ts["@text.todo.unchecked.markdown"] = { fg=syntax.Comment.fg , bg="NONE", bold=true }
-ts["@text.todo.checked.markdown"]   = { fg=pal.bright_green , bg="NONE", bold=true }
+ts["@text.title.1"]        = { fg=pal.yellow,        bg="NONE" }
+ts["@text.title.1.marker"] = { fg=pal.yellow,        bg="NONE" }
+ts["@text.title.2"]        = { fg=pal.bright_cyan,   bg="NONE" }
+ts["@text.title.2.marker"] = { fg=pal.bright_cyan,   bg="NONE" }
+ts["@text.title.3"]        = { fg=pal.bright_green,  bg="NONE" }
+ts["@text.title.3.marker"] = { fg=pal.bright_green,  bg="NONE" }
+ts["@text.title.4"]        = { fg=pal.bright_red,    bg="NONE" }
+ts["@text.title.4.marker"] = { fg=pal.bright_red,    bg="NONE" }
+ts["@text.title.5"]        = { fg=pal.bright_violet, bg="NONE" }
+ts["@text.title.5.marker"] = { fg=pal.bright_violet, bg="NONE" }
+ts["@text.title.6"]        = { fg=pal.bright_blue,   bg="NONE" }
+ts["@text.title.6.marker"] = { fg=pal.bright_blue,   bg="NONE" }
 
 -- if: config.display.hi_formatted_text
 -- Highlight formatted @text (emphasis, strong)
@@ -245,109 +314,41 @@ M.hi_formatted_text = {
 }
 
 ts["@symbol"] = { link="Constant" } -- TODO: WIP
+ts["@type.builtin"]   = { fg=syntax.Type.fg, bg=syntax.Type.bg, italic=true }
+ts["@type.qualifier"] = { link = "Keyword" }
 
--- @comment
--- @punctuation
--- @constant
--- @constant.builtin
--- @constant.macro
--- @define
--- @macro
--- @string
--- @string.escape
--- @string.special
--- @character
--- @character.special
--- @number
--- @boolean
--- @float
--- @function
--- @function.builtin
--- @function.macro
--- @parameter
--- @method
--- @field
--- @property
--- @constructor
--- @repeat
--- @label
--- @operator
--- @keyword
--- @exception
--- @variable
--- @type
--- @type.definition
--- @storageclass
--- @namespace
--- @include
--- @preproc
--- @debug
--- @tag
--- @lsp
--- @lsp.type
--- @lsp.type.class
--- @lsp.type.comment
--- @lsp.type.decorator
--- @lsp.type.enum
--- @lsp.type.enumMember
--- @lsp.type.function
--- @lsp.type.interface
--- @lsp.type.macro
--- @lsp.type.method
--- @lsp.type.namespace
--- @lsp.type.parameter
--- @lsp.type.property
--- @lsp.type.struct
--- @lsp.type.type
--- @lsp.type.typeParameter
--- @lsp.type.variable
-
--- TODO: Markdown
+--- Markdown
 M.markdown = {}
 local markdown = M.markdown
 
-markdown.markdownBold = { fg=ts["@text.strong"].fg, bg="NONE", bold=true }
+markdown.markdownBold   = { fg=ts["@text.strong"].fg, bg="NONE", bold=true }
 markdown.markdownItalic = { fg=ts["@text.emphasis"].fg, bg="NONE", italic=true }
-markdown.markdownCode = { link="Normal" }
-markdown.markdownCodeDelimiter = { link="Delimiter" }
-markdown.markdownHeadingDelimiter = { link="Delimiter" }
--- markdownRule
--- markdownFootnote
--- markdownFootnoteDefinition
-markdown.markdownUrl = { link="Underlined" }
-markdown.markdownLinkDelimiter = { link="Delimiter" }
-markdown.markdownLinkText = { link="Identifier" }
-markdown.markdownLinkTextDelimiter = { link="Delimiter" }
--- markdownEscape
+markdown.markdownCode               = { link="Normal" }
+markdown.markdownCodeDelimiter      = { link="Delimiter" }
+markdown.markdownHeadingDelimiter   = { link="Delimiter" }
+markdown.markdownRule               = { link="Delimiter" }
+markdown.markdownFootnote           = { link="Identifier" }
+markdown.markdownFootnoteDefinition = { link="Identifier" }
+markdown.markdownUrl                = { link="Underlined" }
+markdown.markdownLinkDelimiter      = { link="Delimiter" }
+markdown.markdownLinkText           = { link="Identifier" }
+markdown.markdownLinkTextDelimiter  = { link="Delimiter" }
+markdown.markdownEscape             = { link="SpecialChar" }
 
-markdown.markdownH1 =          { fg=pal.yellow, bg="NONE" }
-markdown.markdownH1Delimiter = { fg=pal.yellow, bg="NONE" }
-markdown.markdownH2 =          { fg=pal.bright_cyan, bg="NONE" }
-markdown.markdownH2Delimiter = { fg=pal.bright_cyan, bg="NONE" }
-markdown.markdownH3 =          { fg=pal.bright_green, bg="NONE" }
-markdown.markdownH3Delimiter = { fg=pal.bright_green, bg="NONE" }
-markdown.markdownH4 =          { fg=pal.bright_red, bg="NONE" }
-markdown.markdownH4Delimiter = { fg=pal.bright_red, bg="NONE" }
-markdown.markdownH5 =          { fg=pal.bright_violet, bg="NONE" }
+-- See @text.title.* in TreeSitter section
+markdown.markdownH1          = { fg=pal.yellow,        bg="NONE" }
+markdown.markdownH1Delimiter = { fg=pal.yellow,        bg="NONE" }
+markdown.markdownH2          = { fg=pal.bright_cyan,   bg="NONE" }
+markdown.markdownH2Delimiter = { fg=pal.bright_cyan,   bg="NONE" }
+markdown.markdownH3          = { fg=pal.bright_green,  bg="NONE" }
+markdown.markdownH3Delimiter = { fg=pal.bright_green,  bg="NONE" }
+markdown.markdownH4          = { fg=pal.bright_red,    bg="NONE" }
+markdown.markdownH4Delimiter = { fg=pal.bright_red,    bg="NONE" }
+markdown.markdownH5          = { fg=pal.bright_violet, bg="NONE" }
 markdown.markdownH5Delimiter = { fg=pal.bright_violet, bg="NONE" }
-markdown.markdownH6 =          { fg=pal.bright_blue, bg="NONE" }
-markdown.markdownH6Delimiter = { fg=pal.bright_blue, bg="NONE" }
+markdown.markdownH6          = { fg=pal.bright_blue,   bg="NONE" }
+markdown.markdownH6Delimiter = { fg=pal.bright_blue,   bg="NONE" }
 
-ts["@text.emphasis.markdown_inline"] = { link="@text.emphasis" }
-ts["@text.strong.markdown_inline"] = { link="@text.strong" }
-
-ts["@text.title.1.markdown"]        = { fg=markdown.markdownH1.fg, bg="NONE" }
-ts["@text.title.1.marker.markdown"] = { fg=markdown.markdownH1Delimiter.fg, bg="NONE" }
-ts["@text.title.2.markdown"]        = { fg=markdown.markdownH2.fg, bg="NONE" }
-ts["@text.title.2.marker.markdown"] = { fg=markdown.markdownH2Delimiter.fg, bg="NONE" }
-ts["@text.title.3.markdown"]        = { fg=markdown.markdownH3.fg, bg="NONE" }
-ts["@text.title.3.marker.markdown"] = { fg=markdown.markdownH3Delimiter.fg, bg="NONE" }
-ts["@text.title.4.markdown"]        = { fg=markdown.markdownH4.fg, bg="NONE" }
-ts["@text.title.4.marker.markdown"] = { fg=markdown.markdownH4Delimiter.fg, bg="NONE" }
-ts["@text.title.5.marker.markdown"] = { fg=markdown.markdownH5.fg, bg="NONE" }
-ts["@text.title.5.markdown"]        = { fg=markdown.markdownH5Delimiter.fg, bg="NONE" }
-ts["@text.title.6.markdown"]        = { fg=markdown.markdownH6.fg, bg="NONE" }
-ts["@text.title.6.marker.markdown"] = { fg=markdown.markdownH6Delimiter.fg, bg="NONE" }
 
 -- TODO: Asciidoc (unchecked)
 -- asciidocAttributeEntry
