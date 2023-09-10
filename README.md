@@ -11,7 +11,7 @@ Install via package manager (e.g. [packer.nvim](https://github.com/wbthomason/pa
 ```lua
 -- packer.nvim:
 vim.cmd.colorscheme("ronny")
-use "Mofiqul/vscode.nvim"
+use "judaew/ronny.nvim"
 
 -- lazy.nvim:
 {
