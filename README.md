@@ -1,4 +1,8 @@
-<h1 align="center">ronny.nvim</h1>
+<div align="center">
+
+# ronny.nvim
+
+</div>
 
 ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim), which mostly was inspired by the Monokai originally created by Wimem Hazenberg.
 
@@ -10,8 +14,8 @@ Install via package manager (e.g. [packer.nvim](https://github.com/wbthomason/pa
 
 ```lua
 -- packer.nvim:
-vim.cmd.colorscheme("ronny")
 use "judaew/ronny.nvim"
+vim.cmd.colorscheme("ronny")
 
 -- lazy.nvim:
 {
