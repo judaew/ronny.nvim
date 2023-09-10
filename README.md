@@ -62,6 +62,7 @@ Additional optional config can be located in [config.lua](lua/ronny/config.lua).
 - [x] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
   ![nvimtree](preview/nvimtree.png)
 - [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) and [nvim-compe](https://github.com/hrsh7th/nvim-compe)
+- [ ] [Conquer of Completion (coc.nvim)](https://github.com/neoclide/coc.nvim)
   ![nvim-cmp](preview/nvim-cmp.png)
 - [x] [Which Key](https://github.com/folke/which-key.nvim)
 - [x] [Git Gutter](https://github.com/airblade/vim-gitgutter) and [Git Signs](https://github.com/lewis6991/gitsigns.nvim)

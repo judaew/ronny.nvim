@@ -622,7 +622,8 @@ indentblankline.IndentBlanklineChar               = { fg="#31383A", bg="NONE", n
 indentblankline.IndentBlanklineSpaceChar          = { fg="#31383A", bg="NONE", nocombine=true }
 indentblankline.IndentBlanklineSpaceCharBlankline = { fg="#31383A", bg="NONE", nocombine=true }
 
---- TODO: COC.nvim (unchecked)
+--- TODO: COC.nvim
+-- See https://github.com/neoclide/coc.nvim/blob/eb63f778d09c37095352fb47f75e592d3d2d0192/doc/coc.txt#L3168
 -- CocHighlightText
 -- CocHighlightRead
 -- CocHighlightWrite
@@ -647,16 +648,17 @@ telescope.TelescopeTitle         = { link="Title" }
 telescope.TelescopeMatching      = { fg=pal.yellow, bg="NONE", bold=true }
 telescope.TelescopePromptCounter = { fg=pal.white, bg="NONE" }
 
---- TODO: DapUI (?)
---- TODO: DevIcon (?)
-
 --- WhickKey
 M.whichkey = {}
 local whichkey = M.whichkey
 
 whichkey.WhichKeyFloat = { fg="NONE", bg="#171717" }
 
+--- TODO: DapUI (?)
+--- TODO: DevIcon (?)
 --- TODO: Dashboard (?)
 --- TODO: hlargs.nvim (?)
+--- TODO: trouble.nvim (?)
+--- TODO: nvim-lightbulb (?)
 
 return M
