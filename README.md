@@ -10,23 +10,51 @@ ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim),
 
 ## Installation
 
-Install via package manager (e.g. [packer.nvim](https://github.com/wbthomason/packer.nvim) or [lazy.nvim](https://github.com/folke/lazy.nvim)):
+Install via package manager (e.g. [vim-plug](https://github.com/junegunn/vim-plug), [packer.nvim](https://github.com/wbthomason/packer.nvim) or [lazy.nvim](https://github.com/folke/lazy.nvim)):
+
+<details><summary>vim-plug</summary>
+
+```vim
+call plug#begin()
+Plug 'judaew/ronny.nvim'
+call plug#end()
+
+colorscheme ronny
+lua require('ronny').setup()
+```
+
+</details>
+<details><summary>packer.nvim</summary>
 
 ```lua
--- packer.nvim:
-use "judaew/ronny.nvim"
-vim.cmd.colorscheme("ronny")
-
--- lazy.nvim:
-{
-    "judaew/ronny.nvim",
-    priority = 1000,
-    config = function()
-        vim.cmd.colorscheme("ronny")
-        require("ronny").setup()
-    end,
-},
+return require("packer").startup(function(use)
+    use {
+        "judaew/ronny.nvim",
+        config = function()
+            vim.cmd.colorscheme("ronny")
+            require("ronny").setup()
+        end
+    }
+end)
 ```
+
+</details>
+<details><summary>lazy.nvim</summary>
+
+```lua
+require("lazy").setup({
+    {
+        "judaew/ronny.nvim",
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme("ronny")
+            require("ronny").setup()
+        end
+    }
+})
+```
+
+</details>
 
 ## Usage
 
