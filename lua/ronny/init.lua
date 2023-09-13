@@ -59,7 +59,8 @@ function M.setup(user_config)
     }
 
     for _, setting in ipairs(settings) do
-        local condition, color, opts = table.unpack(setting)
+        -- NOTE: Using unpack for compatibility with Lua 5.1
+        local condition, color, opts = (table.unpack or unpack)(setting)
         if condition then
             if opts then
                 for _, option in ipairs(opts.vim_options) do
