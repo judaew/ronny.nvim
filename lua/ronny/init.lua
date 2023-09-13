@@ -14,7 +14,7 @@ function M.load()
 end
 
 function M.setup(user_config)
-    config = config.update(user_config)
+    config = config.update(user_config or {})
 
     local colors = config.colors
     local display = config.display

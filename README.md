@@ -23,7 +23,7 @@ vim.cmd.colorscheme("ronny")
     priority = 1000,
     config = function()
         vim.cmd.colorscheme("ronny")
-        require("ronny").setup({})
+        require("ronny").setup()
     end,
 },
 ```
