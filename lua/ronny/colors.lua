@@ -162,6 +162,12 @@ monokai_original.LineNr       = { fg="#8F908A", bg="#272822" }
 monokai_original.NonText      = { fg="#75715E", bg="NONE" }
 monokai_original.SpecialKey   = { fg="#75715E", bg="NONE" }
 
+-- if: config.display.comment_italic
+-- Highlight comment in italics
+M.hi_comment_italic = {
+    Comment = { fg=syntax.Comment.fg, bg="NONE", italic=true }
+}
+
 -- if: config.display.only_CursorLineNr
 -- Highlight only CursorLineNr
 M.only_CursorLineNr = {

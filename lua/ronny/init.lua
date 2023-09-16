@@ -27,6 +27,7 @@ function M.setup(user_config)
         { display.hi_formatted_text, colors.hi_formatted_text },
         { display.only_CursorLineNr, colors.only_CursorLineNr, { vim_options={"cursorline"}}},
         { display.hi_relativenumber, colors.hi_relativenumber, { vim_options={"relativenumber"}}},
+        { display.hi_comment_italic, colors.hi_comment_italic },
 
         { plugins.treesitter,      colors.treesitter },
         { plugins.telescope,       colors.telescope },

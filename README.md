@@ -73,7 +73,9 @@ require("ronny").setup({
         hi_unfocus_window = false,
         -- Highlight formatted @text (e.g., italic, strong) in yellow
         -- in addition to font attributes to make the text more visible
-        hi_formatted_text = true
+        hi_formatted_text = true,
+        -- Highlight comment in italics
+        hi_comment_italic = true
     }
 })
 ```
