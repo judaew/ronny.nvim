@@ -622,11 +622,16 @@ nvimtree.NvimTreeGitMerge    = { fg=pal.violet, bg="NONE" }
 M.indentblankline = {}
 local indentblankline = M.indentblankline
 
+-- v2
 indentblankline.IndentBlanklineContextChar  = { fg="#7E8E91", bg="NONE", nocombine=true }
 indentblankline.IndentBlanklineContextStart = { sp="#7E8E91", bg="NONE", nocombine=true, underline=true }
 indentblankline.IndentBlanklineChar               = { fg="#31383A", bg="NONE", nocombine=true }
 indentblankline.IndentBlanklineSpaceChar          = { fg="#31383A", bg="NONE", nocombine=true }
 indentblankline.IndentBlanklineSpaceCharBlankline = { fg="#31383A", bg="NONE", nocombine=true }
+-- v3
+indentblankline.IblIndent     = { fg="#31383A", bg="NONE", nocombine=true }
+indentblankline.IblWhitespace = { fg="#7E8E91", bg="NONE", nocombine=true }
+indentblankline.IblScope      = { fg="#7E8E91", bg="NONE", nocombine=true }
 
 --- TODO: COC.nvim
 -- See https://github.com/neoclide/coc.nvim/blob/eb63f778d09c37095352fb47f75e592d3d2d0192/doc/coc.txt#L3168
