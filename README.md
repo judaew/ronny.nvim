@@ -6,7 +6,7 @@
 
 ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim), which mostly was inspired by the Monokai originally created by Wimem Hazenberg.
 
-![ronny.nvim](preview/ronny.png)
+![ronny.nvim](https://github.com/user-attachments/assets/5e94dbfc-8a9c-473b-b54d-abe1c96498ae)
 
 ## Installation
 
@@ -85,19 +85,19 @@ Additional optional config can be located in [config.lua](lua/ronny/config.lua).
 ## Supported Plugins
 
 - [x] [LSP](https://github.com/neovim/nvim-lspconfig)/[Diagnostics](https://neovim.io/doc/user/diagnostic.html)
-  ![Diagnostic](preview/diagnostic.png)
+  ![Diagnostic](https://github.com/user-attachments/assets/ec791cd1-fbfa-465f-a7ee-dbe58ae767b2)
 - [x] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [x] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-  ![telescope](preview/telescope.png)
+  ![telescope](https://github.com/user-attachments/assets/9faa00d0-4fb0-4f99-891b-c0007dc9c769)
 - [x] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-  ![nvimtree](preview/nvimtree.png)
+  ![nvimtree](https://github.com/user-attachments/assets/b47eb4c4-5ed8-4f2c-babf-0c6396b5afdb)
 - [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) and [nvim-compe](https://github.com/hrsh7th/nvim-compe)
 - [ ] [Conquer of Completion (coc.nvim)](https://github.com/neoclide/coc.nvim)
-  ![nvim-cmp](preview/nvim-cmp.png)
+  ![nvim-cmp](https://github.com/user-attachments/assets/6f214018-25f8-46b4-a4c8-1d17ad5935df)
 - [x] [Which Key](https://github.com/folke/which-key.nvim)
 - [x] [Git Gutter](https://github.com/airblade/vim-gitgutter) and [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
 - [x] [Lualine](https://github.com/hoob3rt/lualine.nvim)
-  ![Lualine](preview/lualine.png)
+  ![Lualine](https://github.com/user-attachments/assets/8340ba48-23e3-41c1-a1b1-f21c64a07db8)
 - [ ] [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [ ] [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 - [x] [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
