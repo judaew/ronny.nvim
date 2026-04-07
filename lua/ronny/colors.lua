@@ -133,7 +133,7 @@ builtin.SpellCap     = { fg="NONE", bg="NONE", sp=pal.bright_blue, undercurl=tru
 builtin.SpellLocal   = { fg="NONE", bg="NONE", sp=pal.bright_cyan, undercurl=true }
 builtin.SpellRare    = { fg="NONE", bg="NONE", sp=pal.bright_white, undercurl=true }
 builtin.StatusLine   = { fg=pal.bright_white, bg=pal.black3 }
-builtin.StatusLineNC = { fg=pal.bright_black, bg="#080808" }
+builtin.StatusLineNC = { fg=pal.bright_black, bg="#171819" }
 builtin.TabLine      = { fg=pal.bright_white, bg=pal.black }
 builtin.TabLineFill  = { fg=pal.black, bg=pal.black }
 builtin.TabLineSel   = { fg=pal.black, bg=pal.white }
