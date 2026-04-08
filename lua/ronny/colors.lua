@@ -69,7 +69,7 @@ syntax.SpecialComment = { fg=syntax.Comment.fg, bg="NONE" }
 syntax.Debug        = { fg="#BCA3A3", bg="NONE" }
 syntax.Underlined   = { fg="#0A95FF", bg="NONE", sp=pal.blue, undercurl=true }
 syntax.Ignore       = { fg=pal.bright_black, bg="NONE" }
-syntax.Error        = { fg="NONE", bg="NONE", sp=pal.red, underline=true }
+syntax.Error        = { fg="NONE", bg="NONE", sp=pal.bright_red, underline=true }
 syntax.Todo         = { fg=pal.black, bg=pal.bright_cyan, bold=true }
 
 --- Builtin (see :help highlight-default)
@@ -101,7 +101,7 @@ builtin.FoldColumn   = { fg=pal.gray2, bg=pal.black2 }
 builtin.SignColumn   = { fg=pal.bright_green, bg=pal.black2 }
 builtin.IncSearch    = { link="CurSearch" }
 builtin.Substitute   = { link="Search" }
-builtin.LineNr       = { fg=pal.gray2, bg=pal.black2 }
+builtin.LineNr       = { fg="#555556", bg=pal.black2 }
 builtin.LineNrAbove  = { link="LineNr" }
 builtin.LineNrBelow  = { link="LineNr" }
 builtin.CursorLineNr = { fg=pal.white, bg=pal.black2 }
@@ -133,7 +133,7 @@ builtin.SpellCap     = { fg="NONE", bg="NONE", sp=pal.bright_blue, undercurl=tru
 builtin.SpellLocal   = { fg="NONE", bg="NONE", sp=pal.bright_cyan, undercurl=true }
 builtin.SpellRare    = { fg="NONE", bg="NONE", sp=pal.bright_white, undercurl=true }
 builtin.StatusLine   = { fg=pal.bright_white, bg=pal.black3 }
-builtin.StatusLineNC = { fg=pal.bright_black, bg="#080808" }
+builtin.StatusLineNC = { fg=pal.bright_black, bg="#171819" }
 builtin.TabLine      = { fg=pal.bright_white, bg=pal.black }
 builtin.TabLineFill  = { fg=pal.black, bg=pal.black }
 builtin.TabLineSel   = { fg=pal.black, bg=pal.white }
@@ -198,19 +198,19 @@ diag.DiagnosticInfo  = { fg=pal.white, bg="NONE" }
 diag.DiagnosticHint  = { fg=pal.white, bg="NONE" }
 diag.DiagnosticOk    = { fg=pal.bright_green, bg="NONE" }
 
-diag.DiagnosticUnderlineError = { fg="NONE", bg="NONE", sp=pal.red, underline=true }
+diag.DiagnosticUnderlineError = { fg="NONE", bg="NONE", sp=pal.bright_red, underline=true }
 diag.DiagnosticUnderlineWarn  = { fg="NONE", bg="NONE", sp=pal.bright_yellow, underline=true }
 diag.DiagnosticUnderlineInfo  = { fg="NONE", bg="NONE", sp=pal.bright_black, underline=true }
 diag.DiagnosticUnderlineHint  = { fg="NONE", bg="NONE", sp=pal.bright_black, underline=true }
 diag.DiagnosticUnderlineOk    = { fg="NONE", bg="NONE", sp=pal.bright_green, underline=true }
 
-diag.DiagnosticVirtualTextError = { fg=pal.red, bg="NONE" }
+diag.DiagnosticVirtualTextError = { fg=pal.bright_red, bg="NONE" }
 diag.DiagnosticVirtualTextWarn  = { link="DiagnosticWarn" }
 diag.DiagnosticVirtualTextInfo  = { link="DiagnosticInfo" }
 diag.DiagnosticVirtualTextHint  = { link="DiagnosticHint" }
 diag.DiagnosticVirtualTextOk    = { link="DiagnosticOk" }
 
-diag.DiagnosticFloatingError = { fg=pal.red, bg="NONE" }
+diag.DiagnosticFloatingError = { fg=pal.bright_red, bg="NONE" }
 diag.DiagnosticFloatingWarn  = { link="DiagnosticWarn" }
 diag.DiagnosticFloatingInfo  = { link="DiagnosticInfo" }
 diag.DiagnosticFloatingHint  = { link="DiagnosticHint" }
