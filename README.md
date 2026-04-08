@@ -6,7 +6,7 @@
 
 ronny.nvim is a dark colorscheme for [Neovim](https://github.com/neovim/neovim), which mostly was inspired by the Monokai originally created by Wimem Hazenberg.
 
-![ronny.nvim](https://github.com/user-attachments/assets/5e94dbfc-8a9c-473b-b54d-abe1c96498ae)
+![ronny.nvim](https://github.com/user-attachments/assets/016b5f42-1f99-4def-bf71-bd24bd90d0dd)
 
 ## Installation
 
