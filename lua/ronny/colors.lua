@@ -109,7 +109,7 @@ builtin.CursorLineFold = { link="FoldColumn" }
 builtin.CursorLineSign = { link="SignColumn" }
 builtin.MatchParen   = { fg=pal.black, bg=pal.yellow, bold=true }
 builtin.ModeMsg      = { fg=pal.bright_yellow }
-builtin.MsgArea      = { fg=pal.bright_white, bg=pal.black }
+builtin.MsgArea      = { fg=pal.yellow, bg=pal.black }
 builtin.NonText      = { fg=pal.gray2, bg="NONE" }
 builtin.Normal       = { fg=pal.bright_white, bg=pal.black }
 builtin.NormalFloat  = { fg="NONE", bg=pal.black3 }
